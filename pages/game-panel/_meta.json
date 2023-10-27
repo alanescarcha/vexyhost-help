@@ -1,0 +1,11 @@
+{
+    "login": "How to Login",
+    "start-server": "How to start your server",
+    "subusers": "Add another user to your server",
+    "server-importer": "Server Importer Tool",
+    "backups": "How Backups work",
+    "sftp": "How SFTP works",
+    "swap": "What's SWAP Memory",
+    "subdomain": "Subdomain",
+    "schedules": "Schedules"
+}

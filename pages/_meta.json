@@ -1,0 +1,28 @@
+{
+    "index": "👋 Welcome",
+    "game-panel": "💻 Game Panel",
+    "-- Themes": {
+        "type": "separator",
+        "title": "🎮 Game Servers"
+    },
+    "minecraft-java": "Minecraft (Java)",
+    "minecraft-bedrock": "Minecraft (Bedrock)",
+    "ticket": {
+        "title": "🎫 Support Ticket",
+        "type": "page",
+        "href": "https://billing.vexyhost.com/submitticket.php",
+        "newWindow": true
+    },
+    "status": {
+        "title": "🚦 Server Status",
+        "type": "page",
+        "href": "https://status.vexyhost.com/",
+        "newWindow": true
+    },
+    "about": {
+        "title": "🙌 About Us",
+        "type": "page",
+        "href": "https://vexyhost.com/about",
+        "newWindow": true
+    }
+}

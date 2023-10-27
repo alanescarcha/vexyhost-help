@@ -7,6 +7,34 @@ export default {
     },
     footer: {
         component: null
+    },
+    sidebar: {
+        defaultMenuCollapseLevel: 1,
+        autoCollapse: true
+    },
+    toc: {
+        backToTop: true
+    },
+    editLink: {
+        text: null
+    },
+    feedback: {
+        content: null
+    },
+    navigation: {
+        prev: true,
+        next: true
+    },
+    head: (
+        <>
+            <meta name="description" content="😀 Explore our guides and tutorials to better understand your VexyHost services. 🙌" />
+            <link rel="icon" href="https://cdn.vexyhost.com/vh-dark.svg" type="svg"/>
+        </>
+    ),
+    useNextSeoProps() {
+        return {
+            titleTemplate: '%s | 🔍 VexyHost Docs'
+        }
     }
     // ... other theme options
 }
