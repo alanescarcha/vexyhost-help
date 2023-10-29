@@ -1,0 +1,25 @@
+# Set up Databases
+
+Often servers need database for certain add-ons, plugins or because the game itself needs it, our panel allows you to create and manage database in a quick and easy way.
+
+By default each server is allowed to create 2 databases, if you need more you can contact us by support ticket and request more for free, you may have to justify the reason (to prevent misuse of them)
+
+import { Callout } from 'nextra/components'
+
+<Callout type="warning" emoji="⚠️">
+    The use of the databases is oriented to be used within the same server and for that context (you will not be able to use the databases for your web page or store information that is not related to the game hosting service), each database you create is stored in the same node where your server is located to avoid performance problems in the connection or latency. **We always monitor the use of the databases and the connections to them to prevent attacks, inadequate use of the databases and to guarantee optimal performance.**
+</Callout> 
+
+## Create a database
+
+Go to the Database section and click on `New Database`, a form will open in which you will have to name the database, you can also specify from which ip or hostname the database can be accessed, this is optional, you can leave it blank to allow connections from anywhere.
+
+## Manage a database with phpMyAdmin
+
+Once the database is created, you will see it in the list. To see more information, click on the eye icon, there you will see the complete data of the database so you can connect it to what you need.
+
+![](https://i.imgur.com/ayXk28O.png)
+
+If you click on the other popup tab icon, you will be redirected to the phpMyAdmin, this is a web panel in which you can manage in a visual way your MySQL database or also use SQL commands, import or export your database among other features. **To log into the phpMyAdmin you must use the username and password of the database, remember that this information can be seen by clicking on the eye icon.**
+
+![](https://i.imgur.com/RSqeaWt.png)

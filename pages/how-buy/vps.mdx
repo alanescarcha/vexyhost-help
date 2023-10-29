@@ -1,0 +1,48 @@
+# VPS KVM
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+<Callout>
+    The difference between a standard VPS and a VPS KVM lies in the virtualization technology used. KVM virtualization provides greater separation and isolation between virtual servers, as each of them runs on its own virtual machine with its own kernel and dedicated resources, making it a true hardware virtualization. This means that the resources assigned to a KVM VPS are more guaranteed and not shared with other VPSs on the same physical server or node, unlike a standard VPS where resources are shared. This is usually more suitable for applications that require higher security, performance, and control over server resources, which is why we only offer KVM VPS.
+</Callout> 
+
+<Steps>
+
+### Step 1 - Choose plan
+Go to [VPS plans](https://billing.vexyhost.com/store/vps-kvm). Choose the plan that best suits your needs. If you're unsure which one to choose, you can contact support for assistance.
+
+### Step 2 - Choose billing cycle
+Next, you'll need to choose the billing cycle. You can choose to pay for your service monthly, quarterly, semi-annually, or annually. **The longer the period you choose, the more discount you'll receive.**
+
+| Cycle | Months |
+| ------ | ------ |
+| Monthly | Every month |
+| Quarterly | Every 3 months |
+| Semi-Annual | Every 6 months |
+| Annual | Every 12 months |
+
+### Step 3 - Server Location
+In the "Location" section, you can choose the location of your server. Most of the time, the displayed locations have available stock. However, it's possible that a location may not have stock at that moment, and your server will be created in a nearby location.
+
+### Step 4 - Backups
+In the "Backups" section, we offer the possibility to access backups for free. You can create backups and restore them up to 10 times per month for each backup action.
+
+<Callout type="info">
+These backups cannot be downloaded since they are KVM virtualization images.
+</Callout> 
+
+### Step 4 - Operating System
+In the "Operating System" section, you will need to choose the operating system for your VPS. We always try to maintain the latest versions and some stable previous versions.
+
+
+<Callout type="warning">
+The **Micro S** plan does not have the ability to install Windows Server because this operating system requires at least 4GB of RAM to start.
+</Callout> 
+
+### Step 5 - Review & Payment
+👀 Finally, review the summary of your purchase and click on the Continue button. On the summary page, you can enter a discount code if you have one and choose the payment method. Once you complete the summary page, the order will be generated, and you will be redirected to the payment gateway according to the chosen payment method.
+
+</Steps>
+
+**✔ Great! Now you can proceed with the payment. If you have any questions about paying your invoices, you can check our tutorial [here](/account-billing/category/-how-to-pay-according-to-your-country).** Once we receive the payment, we will send you an email confirming the activation of your services and the access details to the VPS.

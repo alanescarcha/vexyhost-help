@@ -1,0 +1,22 @@
+# How to Upload files
+
+There are two ways to upload files to your server. One is through the File Manager, the other is through SFTP. Here we will cover the file manager. For SFTP please see the [article about SFTP](/game-panel/sftp).
+
+import { Callout } from 'nextra/components'
+
+<Callout type="warning" emoji="⚠️">
+    File upload from the File Manager is limited to 100MB. If your file is larger than 100MB consider using [SFTP](/game-panel/sftp).
+</Callout> 
+
+## SFTP or File Manager
+SFTP can be used if your files are too large for the file manager. The file manager has a maximum upload size of 100MB due to our Cloudflare DDoS attack mitigator. If you get an error that the file is too large, use [SFTP](/game-panel/sftp) to upload it.
+
+## Upload files
+
+Uploading files is simple. If you're uploading folders, we'll need to first zip up the file. If you're just uploading a file or jar, then this can be uploaded directly.
+
+To zip a file, on your PC right-click, look for send to, then compressed zip folder. If you're on Windows 11, you might need to press show more options first. **You can also use programs such as Winrar or 7zip to compress to .zip (We do not recommend .rar files).**
+
+Once you have the zip or the files you would like to upload, drag the files over the file manager window. This will start the upload. You can also press the upload button, and navigate to the files.
+
+Once the files have been uploaded, you can unzip any zip filers by right-clicking and then pressing `Descompress`.

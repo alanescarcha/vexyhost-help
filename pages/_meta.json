@@ -1,12 +1,23 @@
 {
     "index": "👋 Welcome",
     "game-panel": "💻 Game Panel",
-    "-- Themes": {
+    "-- Game Servers": {
         "type": "separator",
         "title": "🎮 Game Servers"
     },
     "minecraft-java": "Minecraft (Java)",
     "minecraft-bedrock": "Minecraft (Bedrock)",
+    "-- Cloud Servers": {
+        "type": "separator",
+        "title": "☁ Cloud Servers"
+    },
+    "-- Account Billing": {
+        "type": "separator",
+        "title": "💳 Account & Billing"
+    },
+    "how-buy": "🛒 How to buy",
+    "payments-country": "💳 How to pay according to your country",
+    "payments": "💸 Payment methods",
     "ticket": {
         "title": "🎫 Support Ticket",
         "type": "page",

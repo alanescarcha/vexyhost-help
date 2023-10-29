@@ -1,11 +1,18 @@
 {
     "login": "How to Login",
     "start-server": "How to start your server",
-    "subusers": "Add another user to your server",
+    "subusers": "Add another User",
     "server-importer": "Server Importer Tool",
     "backups": "How Backups work",
     "sftp": "How SFTP works",
     "swap": "What's SWAP Memory",
     "subdomain": "Subdomain",
-    "schedules": "Schedules"
+    "schedules": "Schedules",
+    "databases": "Databases",
+    "2fa": "2FA Setup",
+    "upload-files": "How to Upload files",
+    "moving-files": "How to Moving files",
+    "open-port": "How to open port",
+    "reinstall": "How to Reinstall",
+    "download-server": "Download your server"
 }
