@@ -1,5 +1,7 @@
 {
     "index": "👋 Welcome",
+    "started-guide": "🙌 Started Guide",
+    "faq": "❓ FAQ",
     "game-panel": "💻 Game Panel",
     "-- Game Servers": {
         "type": "separator",
@@ -11,6 +13,7 @@
         "type": "separator",
         "title": "☁ Cloud Servers"
     },
+    "discord-hosting": "🤖 Discord Bot Hosting",
     "-- Account Billing": {
         "type": "separator",
         "title": "💳 Account & Billing"
@@ -18,6 +21,8 @@
     "how-buy": "🛒 How to buy",
     "payments-country": "💳 How to pay according to your country",
     "payments": "💸 Payment methods",
+    "renewals": "🔄 Renewals",
+    "billing-faq": "❓ FAQ",
     "ticket": {
         "title": "🎫 Support Ticket",
         "type": "page",

@@ -1,0 +1,53 @@
+# 💾 How to create a Free MongoDB database
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+<Steps>
+
+### Step 1
+Go to [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register) and create a account.
+
+### Step 2
+Complete the form and click Finish.
+
+![](https://i.imgur.com/RGFoRi3.png)
+
+### Step 3
+Select **Free Shared** plan and select a region near the location of the server you purchased (to reduce latency) then click **Create Cluster**.
+
+![](https://i.imgur.com/fz54VRe.png)
+
+### Step 4
+In the **Security Quickstart** tab select **Username and Password** and create a user.
+
+![](https://i.imgur.com/W0Pa8tv.png)
+
+### Step 5
+Then select **My Local Environment** and in the **IP Address** input type: **0.0.0.0**
+
+![](https://i.imgur.com/nN9uIUu.png)
+
+Then click on **Add Entry** and **Finish and Close**.
+
+<Callout type="info">
+It is possible that the database is still being built and may take a few minutes. You can verify that the database is ready if the status is green indicating that it is active.
+![status database](https://i.imgur.com/TfZY5TE.png)
+</Callout>
+
+### Step 6
+After you verify that the status is active, click the **Connect** button and select **Connect your application**.
+
+![](https://i.imgur.com/e8jxAmM.png)
+
+### Step 7
+Copy the link and you will be able to close the website.
+
+![](https://i.imgur.com/cKI5Plb.png)
+
+</Steps>
+
+<Callout type="warning">
+Remember to edit the `<password>` section to the password you created in [step 4](#step-4).
+![edit password section](https://i.imgur.com/iBgMNf8.png)
+</Callout>
