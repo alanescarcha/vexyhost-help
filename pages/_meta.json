@@ -3,16 +3,21 @@
     "started-guide": "🙌 Started Guide",
     "faq": "❓ FAQ",
     "game-panel": "💻 Game Panel",
+    "vps-panel": "💻 VPS Panel",
     "-- Game Servers": {
         "type": "separator",
         "title": "🎮 Game Servers"
     },
-    "minecraft-java": "Minecraft (Java)",
-    "minecraft-bedrock": "Minecraft (Bedrock)",
+    "minecraft-java": "💻 Minecraft (Java)",
+    "minecraft-bedrock": "📱 Minecraft (Bedrock)",
+    "terraria": "🌳 Terraria",
+    "mta-sa": "🔫 MTA:SA",
     "-- Cloud Servers": {
         "type": "separator",
         "title": "☁ Cloud Servers"
     },
+    "vps": "🚀 VPS Hosting",
+    "web-hosting": "🌎 Web Hosting",
     "discord-hosting": "🤖 Discord Bot Hosting",
     "-- Account Billing": {
         "type": "separator",
