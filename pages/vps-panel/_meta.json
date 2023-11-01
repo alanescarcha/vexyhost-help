@@ -1,0 +1,9 @@
+{
+    "login": "How to Login",
+    "start-vps": "Start, Restart & Shutdown",
+    "rdp": "Connect via RDP",
+    "ssh": "Connect via SSH",
+    "vnc": "Connect via VNC",
+    "vps-password": "Change VPS Password",
+    "reverse-dns": "Reverse DNS / PTR Record"
+}

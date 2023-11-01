@@ -1,0 +1,78 @@
+# Connect via VNC
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+<Callout>
+VNC works on Windows and Linux, this functionality is useful when you run out of access to the server via SSH in the case of Linux or RDP in the case of Windows, for example when you activate a firewall by mistake without configuring it before and you run out of remote connection. VNC is like a monitor connected to the server, regardless of the network or configuration of your VPS you will always have access to it.
+</Callout>
+
+
+## Linux
+<Steps>
+### Step 1
+Go to your [VPS panel](https://vps.vexyhost.com/) and click on the icon shown in the image below.
+![](https://i.imgur.com/VNkMkQJ.png)
+
+### Step 2
+A new box will open, click on **Launch HTML 5 VNC Client**.
+![](https://i.imgur.com/ANEqXM3.png)
+
+### Step 3
+A new pop-up window will open where you can access the Linux console as if you had a monitor connected to the server. Here you will be able to execute the commands you need, remember that you must first login to the server (as in SSH).
+![](https://i.imgur.com/dcWmgXz.png)
+</Steps>
+
+## Windows
+<Steps>
+### Step 1
+Go to your [VPS panel](https://vps.vexyhost.com/) and click on the icon shown in the image below.
+![](https://i.imgur.com/xNyqSDY.png)
+
+### Step 2
+A new box will open, click on **Launch HTML 5 VNC Client**.
+![](https://i.imgur.com/ANEqXM3.png)
+
+### Step 3
+A new pop-up window will open where you can access Windows as if you had a monitor connected to the server. Remember that you must first log in to Windows.
+![](https://i.imgur.com/TgSm5v1.png)
+
+<Callout type="info">
+To unlock the login screen, you must open the VNC options menu, click the first option (Show Extra Keys) and then click the last option (Send Ctrl-Alt-Del), this will show you the field to enter the Administrator password.
+![](https://i.imgur.com/kQvR15z.png)
+</Callout>
+</Steps>
+
+## Use external VNC client software
+If you do not want to use the web browser with noVNC, you can use a program on your PC to access the VNC of your VPS, we recommend using [VNC Viewer](https://www.realvnc.com/connect/download/viewer/).
+
+To view the VNC access data go to `Settings` and then to the `VNC` tab. There you must copy the **IP** and **Port** of VNC to place them in the VNC client program, in this case VNC Viewer.
+
+![](https://i.imgur.com/xwmKx5y.png)
+
+<Callout type="info">
+In this program the format is `<IP>:<Port>` (inserting `:` between the IP and the Port)
+</Callout>
+![](https://i.imgur.com/zyOrOIs.png)
+
+If you get an Encryption message when connecting, simply click continue. You will then be prompted for the VNC password, this password can be found in the last email sent to you by the VPS panel when your VPS was created. If you do not remember it, you can reset it by following [these steps](/vps-panel/vnc#change-vnc-password).
+
+![](https://i.imgur.com/ZUt3OxY.png)
+
+Then simply follow the steps depending on whether your VPS is Windows or Linux:
+
+- [Windows login](/vps-panel/vnc#step-3-1)
+- [Linux Login](/vps-panel/vnc#step-3)
+
+## Change VNC password
+
+If you do not remember your VNC password or you lost the email with the VNC access data, you can reset it from the [VPS panel](https://vps.vexyhost.com/).
+
+Go to `Settings` and then on the `VNC Password` tab, there enter the new VNC password and repeat to confirm. **Use a strong password**
+
+<Callout type="info">
+You may need to **restart the VPS from the panel** for the new VNC password to be set. To learn how to reboot your VPS from the panel follow [this article](/vps-panel/start-vps).
+</Callout>
+
+![](https://i.imgur.com/UbOjLN7.png)
+
