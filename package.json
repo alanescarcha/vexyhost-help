@@ -1,4 +1,8 @@
 {
+  "name": "vexyhost-help",
+  "author": "Alan Escarcha",
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "next",
     "build": "next build",
