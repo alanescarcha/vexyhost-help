@@ -1,0 +1,71 @@
+# Como instalar Downtown RP
+
+import { Callout } from 'nextra/components'
+
+**1.** Ve a la pestaña **MTA:SA GM Installer** de tu servidor.
+
+![](https://i.imgur.com/9usqk4d.png)
+
+**2.** Elije la GM que quieras instalar, luego haces click en el boton **Install**, te pedirá confirmar la instalación.
+
+<Callout type="warning">
+Recuerda que **esto eliminará todos tus archivos que tengas en el servidor**, recomendamos generar un Backup antes de continuar.
+</Callout>
+
+![](https://i.imgur.com/Qiiayq2.png)
+
+**3.** Una vez que finalice la instalación se mostrara un mensaje como este:
+
+| ![space-1.jpg](https://i.imgur.com/ItwX4qu.png) | 
+|:--:| 
+| MTA:SA Gamemode installed successfully, you must start the server. |
+
+**4.** Ahora deberas ir al **File Manager** y descargar el archivo **server.sql** en tu PC.
+
+![](https://i.imgur.com/BgYqS22.png)
+
+**5.** Luego deberas ir a **Databases** y crear una base de datos para tu GM.
+
+<Callout type="info">
+Debes usar una base de datos nueva, tambien recomendamos dejar el campo **CONNECTIONS FROM** en blanco.
+</Callout>
+
+**6.** Una vez creada, deberas ir al phpMyAdmin para importar el archivo server.sql que descargamos anteriormente. Debes hacer click en el icono que se muestra a continuación.
+
+![](https://i.imgur.com/jb32AKv.png)
+
+**7.** Ahora tendras que colocar los datos de acceso a la base de datos, podes ver los mismos haciendo click en el icono que se muestra a continuación.
+
+![](https://i.imgur.com/4u0xPts.png)
+
+**8.** Luego de colocar en el phpMyAdmin el usuario y contraseña de la base de datos, debes seleccionar la base de datos.
+
+<Callout type="info">
+Asegurate que arriba aparezca tu base de datos para saber que esta correctamente seleccionada.
+</Callout>
+
+![](https://i.imgur.com/bwx2qcp.png)
+
+**9.** Ahora deberas hacer click en **Importar**.
+
+![](https://i.imgur.com/b4fLw2n.png)
+
+**10.** Asegurate que arriba se menciona el nombre de la base de datos correcta, luego selecciona el archivo **server.sql** que descargamos anteriormente y debajo del todo haz click en **Continuar**.
+
+![](https://i.imgur.com/vRLExD4.png)
+
+**11.** Cuando finalice, si todo salió bien, se mostrará un mensaje como el siguiente indicando que se importó correctamente:
+
+![](https://i.imgur.com/Vy0GDyV.png)
+
+**12.** Ahora deberas ir al **File Manager** y editar el siguiente archivo: `mods > deathmatch > resources > sql > mysql.lua`
+
+![](https://i.imgur.com/DcjyZcI.png)
+
+**13.** Deberas colocar en el archivo `mysql.lua` los datos de acceso a la base de datos del paso **7** y guardar el archivo. El puerto y socket no deben modificarse.
+
+**14.** Luego de guardar el archivo editado, ya podras iniciar el servidor.
+
+<Callout type="info">
+Si tenes algun inconveniente al iniciar el servidor revisá el siguiente articulo que explica algunos errores comunes, haz [click aquí](/game-hosting/mta-sa/common-errors). Tambien podes contactarnos por ticket de soporte para que podamos ayudarte.
+</Callout>
