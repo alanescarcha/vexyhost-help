@@ -1,0 +1,77 @@
+# Common errors in MTA:SA servers
+
+import { Callout } from 'nextra/components'
+
+## Unable to connect to mysql
+
+This error in the console looks like this:
+```go {3,7,10,13}
+[00:48:55] Server stopped!
+[00:48:55] Stopping resources....
+[00:48:55] ERROR: Unable to connect to mysql: (1045) Access denied for user 'USUARIO_DB'@'127.0.0.1' (using password: YES)
+[00:48:55] ERROR: sql/mysql.lua:43: Connection to MySQL Failed.
+[00:48:55] Server shutdown as requested by resource sql (MySQL failed to connect.)
+[00:48:55] Start up of resource sql cancelled by script
+[00:48:58] ERROR: Unable to connect to mysql: (1045) Access denied for user 'USUARIO_DB'@'127.0.0.1' (using password: YES)
+[00:48:58] Server shutdown as requested by resource sql (MySQL failed to connect.)
+[00:48:58] Start up of resource sql cancelled by script
+[00:48:59] ERROR: Unable to connect to mysql: (1045) Access denied for user 'USUARIO_DB'@'127.0.0.1' (using password: YES)
+[00:48:59] Server shutdown as requested by resource sql (MySQL failed to connect.)
+[00:48:59] Start up of resource sql cancelled by script
+[00:48:59] ERROR: Unable to connect to mysql: (1045) Access denied for user 'USUARIO_DB'@'127.0.0.1' (using password: YES)
+[00:48:59] Server shutdown as requested by resource sql (MySQL failed to connect.)
+[00:48:59] Start up of resource sql cancelled by script
+[00:48:59] MODULE: Unloaded "MySQL 5.0 database module" (0.50) by "Alberto Alonso <rydencillo@gmail.com>"
+[00:48:59] ERROR: sql/mysql.lua:43: Connection to MySQL Failed.  [DUP x3]
+[00:48:59] Closing SQLite3 database
+```
+
+This error indicates that the GM is not being able to connect to the database, check that the resource in the **"sql "** folder is configured correctly.
+To configure the **"sql"** resource you must go to the File manager, go to the `mods > deathmatch > resources > sql` folder and edit the `mysql.lua` file:
+
+```lua filename="/mods/deathmatch/resources/sql/mysql.lua"
+	local server = "127.0.0.1"
+	local user = "USUARIO_DB"
+	local password = "CLAVE_DB"
+	local db = "NOMBRE_DB"
+	local port = 3306
+	local socket = "/var/lib/mysql/mysql.sock"
+```
+
+Make sure that the data in the mysql.lua file is correct. In the example above you would have to change the server, user, password and db.
+
+<Callout type="warning">
+The port is always **3306** and the socket is always **"/var/lib/mysql/mysql.sock"**. If you need to create a database for your GM click [here](/game-panel/databases)
+</Callout>
+
+## MySQL module missing
+This error in the console looks like this:
+```go {3,6,9}
+[04:13:55] Server stopped!
+[04:13:55] Stopping resources.........
+[04:13:55] Server shutdown as requested by resource sql (MySQL module missing.)
+[04:13:55] Start up of resource sql cancelled by script
+[04:13:55] Start up of resource vehicles cancelled by script
+[04:13:55] Server shutdown as requested by resource sql (MySQL module missing.)
+[04:13:55] Start up of resource sql cancelled by script
+[04:13:55] Start up of resource vehicles cancelled by script
+[04:13:55] Server shutdown as requested by resource sql (MySQL module missing.)
+[04:13:55] Start up of resource sql cancelled by script
+[04:13:55] Start up of resource vehicles cancelled by script
+[04:13:55] Closing SQLite3 database
+```
+
+The error indicates that GM cannot find the `mta_mysql.so` module. This module must be in the `x64 > modules` folder, if you only have a module named `mta_mysql.dll` it will not work because the .dll files are for Windows. In VexyHost all MTA:SA servers run on Linux, so you will need the module in .so format.
+
+You can download the module from the official MTA wiki: https://wiki.multitheftauto.com/wiki/Modules/MTA-MySQL
+
+In case you have the correct module and it still does not load, it is possible that it is not configured in the `mtaserver.conf` file. To tell the server to load the `mta_mysql.so` module it must be configured as follows:
+
+```html filename="/mods/deathmatch/mtaserver.conf" {3}
+    <!-- Specifies the module(s) which are loaded with the server. To load several modules, add more <module>
+         parameter(s). Optional parameter. -->
+    <module src="mta_mysql.so"/>
+```
+
+Placing `<module src="mta_mysql.so"/>` in the `mtaserver.conf` file should fix the problem eventually. If not, open a support ticket so we can help you.
+
