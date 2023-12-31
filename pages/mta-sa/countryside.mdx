@@ -1,0 +1,84 @@
+# How to install Countryside RP
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+<Steps>
+
+### Step 1
+Go to the **MTA:SA GM Installer** tab of your server.
+
+![](https://i.imgur.com/9usqk4d.png)
+
+### Step 2
+Choose the **Countryside RP** to install, then click the **Install** button, it will ask you to confirm the installation.
+
+<Callout type="warning">
+Remember that **this will delete all your files you have on the server**, we recommend generating a Backup before continuing.
+</Callout>
+
+![](https://i.imgur.com/HFG7fta.png)
+
+### Step 3
+Once the installation is complete a message like this will be displayed:
+![](https://i.imgur.com/ItwX4qu.png)
+
+### Step 4
+Now you must go to the **File Manager** and download the **gmrp.sql** file to your PC.
+
+![](https://i.imgur.com/L6kS4eB.png)
+
+### Step 5
+Next you should go to **Databases** and create a database for your GM.
+
+<Callout type="warning">
+You must use a new database, we also recommend leaving the **CONNECTIONS FROM** field blank.
+</Callout>
+
+### Step 6
+Once created, you must go to phpMyAdmin to import the server.sql file we downloaded earlier. You must click on the icon shown below.
+
+![](https://i.imgur.com/jb32AKv.png)
+
+### Step 7
+Now you will have to set the database access data, you can see them by clicking on the icon shown below.
+
+![](https://i.imgur.com/4u0xPts.png)
+
+### Step 8
+After placing in the phpMyAdmin the user and password of the database, you must select the database.
+
+<Callout type="info">
+Make sure that your database appears at the top so that you know that it is correctly selected.
+</Callout>
+
+![](https://i.imgur.com/bwx2qcp.png)
+
+### Step 9
+Now you must click on **Import**.
+
+![](https://i.imgur.com/b4fLw2n.png)
+
+### Step 10
+Make sure the correct database name is mentioned above, then select the **gmrp.sql** file we downloaded earlier and click **Continue**.
+
+![](https://i.imgur.com/vRLExD4.png)
+
+### Step 11
+When finished, if everything went well, a message like the following will be displayed indicating that the import was successful:
+
+![](https://i.imgur.com/Vy0GDyV.png)
+
+### Step 12
+Now go to the **File Manager** and edit the following file: `mods > deathmatch > resources > mysql > mysql.lua`.
+
+![](https://i.imgur.com/hRM4smt.png)
+
+### Step 13
+You should place in the `mysql.lua` file the database access data from [step 7](#step-7) and save the file. `share` must not be modified. After saving the edited file, you can start the server.
+
+</Steps>
+
+<Callout type="info">
+If you have any problems starting the server check the following article that explains some common errors, [click here](/mta-sa/common-errors). You can also contact us by support ticket so we can help you.
+</Callout>
