@@ -1,0 +1,137 @@
+# Initial Setup - FiveM
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+import { Code } from 'nextra/components'
+
+<Callout type="info">
+    FiveM does not allow hosting providers to sell FiveM hosting, restricting only one server per IP. However, according to the terms it is possible to host FiveM on VPS of any provider, that is why VexyHost offers Windows VPS with the necessary tools already pre-installed, unfortunately we cannot offer it as Game Hosting with our game panel.
+</Callout>
+
+<Steps>
+
+### Step 1
+Once you have purchased your FiveM VPS Windows you will have to access through RDP (Remote Desktop Protocol) to your VPS. The VPS and Panel access data will be sent to the same email with which you purchased the service. To learn how to connect using RDP check [this article](/vps-panel/rdp).
+
+When you access your VPS you will see these programs and folders on the desktop.<br/>
+**HeidiSQL:** This is a SQL client like phpMyAdmin for your MySQL databases.<br/>
+**XAMPP:** It is a program that in this case is configured to host the databases and an FTP server to be able to manage your files remotely.<br/>
+**Visual Studio Code:** It is a code editor that will help you to edit the files of your FiveM server in an easier way.<br/>
+**SERVER folder:** This folder will host your server and the FiveM artifacts you need. This folder is already configured to be shared by FTP. ⚠ **DO NOT DELETE IT**
+
+![](https://i.imgur.com/j28w4kK.png)
+
+### Step 2
+
+In the VPS you will have to go to https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/ to download the FiveM artifact that you are going to use for your server. You can use the Edge browser that comes preinstalled.
+
+![](https://i.imgur.com/HdxMIVH.png)
+
+### Step 3
+
+Then move the downloaded file to the SERVER folder inside a new folder that you can call artifact. Then we unzip the file.
+
+![](https://i.imgur.com/n4JmXtH.png)
+
+### Step 4
+
+After extracting the downloaded file, we run the FXServer.exe file.
+
+![](https://i.imgur.com/0AykpvY.png)
+
+When running the FiveM Server, a console will open showing the PIN to be used in txAdmin (in this case the PIN is 9543):
+
+![](https://i.imgur.com/f6nV1oK.png)
+
+### Step 5
+
+Now on your PC you can go to the txAdmin of your server. The URL is <Code>http://\<IP of the VPS>:40120</Code>, you can see it in the FiveM console. You can also access the txAdmin from the VPS if you don't want to do it from your PC.
+
+In the txAdmin simply enter the code shown in the FiveM console and click on Link Account.
+
+![](https://i.imgur.com/UpJWoMy.png)
+
+### Step 6
+
+If you are not logged in to Cfx.re you will be redirected to login.
+
+<Callout type="info">
+    Cfx.re is the site where you will generate your key to activate your server in FiveM, this is mandatory for all servers.
+</Callout>
+
+![](https://i.imgur.com/boBL1o5.png)
+
+If you are already logged in, simply authorize your account and go to the next step.
+
+![](https://i.imgur.com/i2W2Xmd.png)
+
+### Step 7
+
+After authorizing your account, txAdmin will ask you to generate a password.
+
+![](https://i.imgur.com/gb3QewO.png)
+
+### Step 8
+
+Now you must configure your server, you must choose your Server Name and the type of deployment. If you don't have a server already set up we recommend you to choose "Popular Recipes".
+
+![](https://i.imgur.com/VugZeQM.png)
+
+In the Template you can choose from the options that say FiveM. CFX Default will download a base template, ESX Legacy is a Roleplay template as well as QBCore with some differences, we recommend you to investigate all 3 templates. If you are not sure, you can change the template later if you don't like it.
+
+![](https://i.imgur.com/6JvtRQ0.png)
+
+<Callout type="warning">
+    The options that say REDM are for Red Dead Redemption servers and do not work in this case, since you are hosting a GTA 5 server.
+</Callout>
+
+### Step 9
+
+After completing the template configuration, the Recipe configuration follows. Simply click Next in step 1.
+
+![](https://i.imgur.com/gHjhOFg.png)
+
+### Step 10
+
+Then you will need to place your Cfx.re License Key.
+
+![](https://i.imgur.com/mAPFTHh.png)
+
+To do this go to https://keymaster.fivem.net/ log in and click on New server.
+
+![](https://i.imgur.com/PFL0km4.png)
+
+### Step 11
+
+Now you must fill in the requested data. In server IP you must put the IP of your VPS, **in Server type choose VPS and then under it put FiveM**, finally complete the captcha and click on Generate.
+
+<Callout type="warning">
+    It is important that you choose VPS and put FiveM underneath to avoid inconveniences in the future.
+</Callout>
+
+![](https://i.imgur.com/tWjHqJd.png)
+
+### Step 12
+
+You will then see a green message indicating that it was successfully sent. Now you must copy the key and paste it into your txAdmin.
+
+![](https://i.imgur.com/FVc1iWE.png)
+
+</Steps>
+
+✅ That's all! After completing the final configuration in txAdmin you should see the console of your server.
+
+![](https://i.imgur.com/DMPLBYm.png)
+
+You will be able to connect to your FiveM server, you can find your server by searching it by name or in the console (F8 key) type: <Code>connect \<IP of the VPS></Code>
+
+![](https://i.imgur.com/L4O7C8s.png)
+
+<Callout type="default">
+With the <Code>/tx</Code> command in the chat (by pressing T key) you can open the Admin Menu in the game.
+</Callout>
+![](https://i.imgur.com/6N2qK4G.png)
+
+<Callout type="info">
+If you have any problem with the installation of your server contact us by support ticket or in our [Discord](https://discord.vexyhost.com/) so we can help you. In most cases we can even do the installation for you.
+</Callout>
