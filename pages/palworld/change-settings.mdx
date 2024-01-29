@@ -6,6 +6,21 @@ import { Callout, Steps, Code } from 'nextra/components'
     This game is in Early Access, so changing settings can be confusing at first. Some parameters such as **ServerPlayerMaxNum**, **ServerName**, **ServerPassword** and **AdminPassword** are configured from the Startup tab.
 </Callout>
 
+<Callout type="warning">
+## Known Issues / FAQ
+1. The server won't show up in the Community-Server tab.<br/>
+-> This is a known problem and the devs will hopefully fix that asap. Best choice is to connect by IP and Password.
+2. The server has a memory leak.<br/>
+-> This is also an issue that they are aware of.<br/>
+-> The bEnableInvaderEnemy option seems to have a huge impact on the current RAM usage. Disabling it might be choice.<br/>
+-> Tip: Schedule a server restart every 6h. You might adjust the value according to your RAM!
+3. The server does not show up in the steam server list.<br/>
+-> This is might never be supported.
+4. The config file gets deleted/reset on server restart.<br/>
+-> If your server ports is different than the default port (8211) you need to adjust the port inside the config file <Code>Pal/Saved/Config/LinuxServer/PalWorldSettings.ini</Code>.<br/>
+-> Before editing the config file always make sure to fully stop the server first. Otherwise all changes wont be saved.
+</Callout>
+
 <Steps>
 
 ### Step 1
