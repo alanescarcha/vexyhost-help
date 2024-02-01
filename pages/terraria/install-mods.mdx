@@ -1,0 +1,114 @@
+# How to install mods (tModLoader)
+
+import { Callout, Steps, Code } from 'nextra/components'
+
+<Callout type="error">
+    tModLoader is only available for PC.
+</Callout>
+
+<Callout type="warning">
+    To use Mods you need to use tModLoader, it does not work in the Vanilla version of Terraria. **If your server is Vanilla, open a support ticket on our [Discord](https://discord.vexyhost.com/) and we will help you to change the version to tModLoader.**
+</Callout>
+
+## How to install mods on Terraria Server
+
+<Steps>
+
+### Step 1
+
+Stop your server and download the Terraria mod you want, the file name must have the extension <Code>.tmod</Code>. For example <Code>CalamityMod.tmod</Code>
+
+<Callout type="default">
+    If you have the mods downloaded inside the game, you can find the <Code>.tmod</Code> files on your PC in <Code>Documents > My Games > Terraria > tModLoader > Mods</Code>
+
+    ![](https://i.imgur.com/esHl49r.png)
+</Callout>
+
+### Step 2
+
+Now go to File Manager and upload the mods files into the folder named <Code>mods</Code>.
+
+![](https://i.imgur.com/8rCQRov.png)
+
+### Step 3
+
+Inside the <Code>mods</Code> folder create a file called <Code>enabled.json</Code>. You can create a file using the New File button in the File Manager.
+
+![](https://i.imgur.com/HgqsI5V.png)
+
+<Callout type="default">
+    If the mods you are going to use are enabled in-game, you can upload the <Code>enabled.json</Code> file from your PC. This file can be found in <Code>Documents > My Games > Terraria > tModLoader > Mods</Code>
+
+    ![](https://i.imgur.com/tgF6Ihg.png)
+</Callout>
+
+### Step 4
+
+Using the following format, add the mod names to the <Code>enabled.json</Code> file. If you upload the <Code>enabled.json</Code> file from your PC it is likely that the mods are already there, but we recommend checking it.
+
+<Callout type="warning">
+    Remember that inside the <Code>enabled.json</Code> file **only goes the name without the .tmod format**.
+</Callout>
+
+#### Example for single mod:
+```json filename="enabled.json"
+[
+  "CalamityMod"
+]
+```
+#### Example for multiple mods:
+```json filename="enabled.json"
+[
+   "CalamityMod",
+   "AnotherModNameHere",
+   "AnotherModNameHere"
+]
+```
+
+### Step 5
+
+Save the <Code>enabled.json</Code> file and start your server.
+
+<Callout type="default">
+    You can type <Code>modlist</Code> in the console to check if the mods loaded successfully.
+</Callout>
+
+</Steps>
+
+✅ That's all! Now you can join the server with the mods. If you have any problem, contact us by [Discord](https://discord.vexyhost.com/) so we can help you.
+
+## How to install mods on your Terraria Client
+
+<Callout type="default">
+    If you don't have tModLoader yet you can download it from Steam, tModLoader is a Community-Made Mod so it's free.
+</Callout>
+
+You can easily download mods from the game in Menu <Code>Workshop > Download Mods</Code>
+
+You can also search for mods with the search engine and to download the mods you must click on the download icon (those mods that do not have the icon is because you already have it downloaded).
+
+![](https://i.imgur.com/t3wX4Uo.png)
+
+However, if the mods do not appear there or you have the .tmod file follow these steps below.
+
+<Steps>
+
+### Step 1
+
+Download the Terraria mod that you want, the file name must have the extension <Code>.tmod</Code>. For example <Code>CalamityMod.tmod</Code>
+
+### Step 2
+
+Copy your downloaded mods to the <Code>Documents > My Games > Terraria > tModLoader > Mods</Code> folder on your PC.
+
+![](https://i.imgur.com/esHl49r.png)
+
+### Step 3
+
+Start your TModLoader and the Mods will appear on <Code>Workshop > Manage Mods</Code> menu. Just enable the ones you need or use the "Enable All" button.
+
+![](https://i.imgur.com/smoOsrF.png)
+
+</Steps>
+
+✅ That's all! Now you can join the server with the mods. If you have any problem, contact us by [Discord](https://discord.vexyhost.com/) so we can help you.
