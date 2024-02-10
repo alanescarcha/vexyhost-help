@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "postbuild": "rm -rf .next/cache && next-sitemap",
-    "start": "next start"
+    "postbuild": "rm -rf .next/cache && rm -rf .public && next-sitemap",
+    "start": "next start",
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "country-flag-emoji-polyfill": "^0.1.8",
