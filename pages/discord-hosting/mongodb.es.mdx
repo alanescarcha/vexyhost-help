@@ -1,0 +1,53 @@
+# Cómo crear una base de datos MongoDB gratis
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+<Steps>
+
+### Paso 1
+Vaya a [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register) y cree una cuenta.
+
+### Paso 2
+Rellene el formulario y haga clic en Finalizar.
+
+![](https://i.imgur.com/RGFoRi3.png)
+
+### Paso 3
+Seleccione el plan **Free Shared** y seleccione una región cercana a la ubicación del servidor que adquirió (para reducir la latencia) luego haga clic en **Crear Cluster**.
+
+![](https://i.imgur.com/fz54VRe.png)
+
+### Paso 4
+En la pestaña **Security Quickstart** seleccione **Username and Password** y cree un usuario.
+
+![](https://i.imgur.com/W0Pa8tv.png)
+
+### Paso 5
+A continuación, seleccione **My Local Environment** y en el campo **IP Address** escriba: **0.0.0.0**
+
+![](https://i.imgur.com/nN9uIUu.png)
+
+A continuación, haz clic en **Agregar entrada** y **Finalizar y cerrar**.
+
+<Callout type="info">
+Es posible que la base de datos todavía se esté construyendo y puede tardar unos minutos. Puede comprobar que la base de datos está lista si el estado es verde indicando que está activa.
+![estado base de datos](https://i.imgur.com/TfZY5TE.png)
+</Callout>
+
+### Paso 6
+Después de verificar que el estado es activo, haga clic en el botón **Connect** y seleccione **Connect your application**.
+
+![](https://i.imgur.com/e8jxAmM.png)
+
+### Paso 7
+Copie el enlace y podrá cerrar la página web.
+
+![](https://i.imgur.com/cKI5Plb.png)
+
+</Steps>
+
+<Callout type="warning">
+Recuerda editar la sección `<password>` con la contraseña que creaste en el [paso 4](#paso-4).
+![edit password section](https://i.imgur.com/iBgMNf8.png)
+</Callout>
