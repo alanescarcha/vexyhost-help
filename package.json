@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "postbuild": "rm -rf .next/cache && rm -rf .public && next-sitemap",
+    "postbuild": "rm -rf .next/cache && rm -rf .public/sitemap-0.xml && rm -rf .public/sitemap.xml && next-sitemap --config next-sitemap.config.js",
     "start": "next start",
-    "sitemap": "next-sitemap"
+    "sitemap": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
     "country-flag-emoji-polyfill": "^0.1.8",

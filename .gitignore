@@ -7,5 +7,6 @@
 out
 dist
 
-# public
-/public
+# sitemaps
+/public/sitemap.xml
+/public/sitemap-0.xml
