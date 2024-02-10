@@ -8,4 +8,4 @@ out
 dist
 
 # public
-./public
+/public
