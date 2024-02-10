@@ -1,0 +1,52 @@
+{
+    "index": "👋 Bienvenido",
+    "started-guide": "🙌 Guía de inicio",
+    "faq": "❓ Preguntas Frecuentes",
+    "game-panel": "💻 Game Panel",
+    "vps-panel": "💻 Panel VPS",
+    "-- Game Servers": {
+        "type": "separator",
+        "title": "🎮 Game Servers"
+    },
+    "minecraft-java": "💻 Minecraft (Java)",
+    "minecraft-bedrock": "📱 Minecraft (Bedrock)",
+    "terraria": "🌳 Terraria",
+    "mta-sa": "🔫 MTA:SA",
+    "fivem": "🏃‍♂️ FiveM",
+    "palworld": "🐲 Palworld",
+    "enshrouded": "⚔ Enshrouded",
+    "-- Cloud Servers": {
+        "type": "separator",
+        "title": "☁ Cloud Servers"
+    },
+    "vps": "🚀 VPS Hosting",
+    "web-hosting": "🌎 Web Hosting",
+    "discord-hosting": "🤖 Discord Bot Hosting",
+    "-- Account Billing": {
+        "type": "separator",
+        "title": "💳 Cuenta y facturación"
+    },
+    "how-buy": "🛒 Cómo comprar",
+    "payments-country": "💳 Cómo pagar según tu país",
+    "payments": "💸 Métodos de pago",
+    "renewals": "🔄 Renovaciones",
+    "billing-faq": "❓ Preguntas Frecuentes",
+    "ticket": {
+        "title": "🎫 Ticket de Soporte",
+        "type": "page",
+        "href": "https://billing.vexyhost.com/submitticket.php?language=spanish",
+        "newWindow": true
+    },
+    "status": {
+        "title": "🚦 Estado de Servidores",
+        "type": "page",
+        "href": "https://status.vexyhost.com/",
+        "newWindow": true
+    },
+    "about": {
+        "title": "🙌 Sobre nosotros",
+        "type": "page",
+        "href": "https://vexyhost.com/es/about/",
+        "newWindow": true
+    }
+}

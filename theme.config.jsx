@@ -35,6 +35,10 @@ export default {
         return {
             titleTemplate: '%s | 🔍 VexyHost Docs'
         }
-    }
+    },
+    i18n: [
+        { locale: 'en', text: '🇺🇸 English' },
+        { locale: 'es', text: '🇪🇸 Español' },
+    ]
     // ... other theme options
 }

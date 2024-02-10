@@ -74,4 +74,4 @@ Yes, We have ready made plans for regular customers looking for a customized ser
 
 ## Do you offer game panel demo?
 
-You can check it [here](https://demo.vexyhost.com/)
+You can check it [here](https://demo.vexyhost.com/). (The panel may not have all the recent updates that our main Game Panel has.)

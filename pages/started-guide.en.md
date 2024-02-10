@@ -2,7 +2,7 @@
 
 This guide is intended to help you and answer common questions about our services.
 
-Please note your username in the game panel is your email address and password from the billing panel, where you registered before purchasing the service. Check this [here](http://localhost:3000/game-panel/login)
+Please note your username in the game panel is your email address and password from the billing panel, where you registered before purchasing the service. Check this [here](/game-panel/login)
 
 ## For Game Servers and Discord Bot Hosting
 
@@ -16,7 +16,7 @@ Your username should be your email address used in the billing panel. If this is
 
 Control Panel (cPanel): The link is indicated in the email that was sent to you.
 
-![Email web hoting done](https://i.imgur.com/QaDTrxD.png)
+![Email web hosting done](https://i.imgur.com/QaDTrxD.png)
 
 ## How do I find my service information, such as IP address and panel logins?
 
