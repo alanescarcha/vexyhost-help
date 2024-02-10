@@ -43,6 +43,9 @@ export default {
             <link rel="alternate" href="https://help.vexyhost.com/es" hreflang="es" />
             <link rel="sitemap" href="/sitemap.xml" />
             <link rel="shortcut icon" href="https://vexyhost.com/favicon.ico" />
+            <link rel="preconnect" href="https://cdn.vexyhost.com" />
+            <link rel="preconnect" href="https://i.imgur.com" />
+            <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         </>
     ),
     useNextSeoProps() {
