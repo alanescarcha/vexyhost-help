@@ -28,7 +28,7 @@ export default {
     head: (
         <>
             <meta name="description" content="😀 Explore our guides and tutorials to better understand your VexyHost services. 🙌" />
-            <link rel="icon" href="https://cdn.vexyhost.com/vh-dark.svg" type="svg"/>
+            <link rel="shortcut icon" href="https://vexyhost.com/favicon.ico"></link>
         </>
     ),
     useNextSeoProps() {
