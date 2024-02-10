@@ -1,0 +1,10 @@
+{
+    "add-credits": "💰 Añadir saldo",
+    "cancel-service": "❌ Cancelar servicio",
+    "cancel-paypal": "🚫 Cancelar PayPal",
+    "change-password": "🔐 Cambiar contraseña",
+    "forgot-password": "🔓 Olvidé la contraseña",
+    "2fa": "🔒 Activar 2FA",
+    "upgrade-service": "🔼 Actualiza tu servicio",
+    "service-suspended": "⏸ Servicio suspendido"
+}

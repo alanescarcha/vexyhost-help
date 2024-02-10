@@ -5,6 +5,15 @@ export default {
     chat: {
         link: 'https://discord.vexyhost.com/'
     },
+    search:
+    {
+        placeholder: 'Search...'
+    },
+    banner: {
+        dismissible: true,
+        key: 'new_translate', // Storage key to keep the banner state (dismissed or not).
+        text: '🎉 New translations available. This site is still in beta. ⚠'
+    },
     footer: {
         component: null
     },
