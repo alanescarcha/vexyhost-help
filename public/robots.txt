@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://help.vexyhost.com
-
-# Sitemaps
-Sitemap: https://help.vexyhost.com/sitemap.xml
