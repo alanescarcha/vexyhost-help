@@ -1,0 +1,115 @@
+# Cómo cambiar la configuración del servidor Palworld
+
+import { Callout, Steps, Code } from 'nextra/components'
+
+<Callout type="warning">
+    Este juego está en Early Access, por lo que cambiar la configuración puede resultar confuso al principio. Algunos parámetros como **ServerPlayerMaxNum**, **ServerName**, **ServerPassword** y **AdminPassword** se configuran desde la pestaña Startup.
+</Callout>
+
+<Callout type="info">
+## Problemas conocidos / Preguntas frecuentes
+1. El servidor no aparecerá en la pestaña Community-Server.<br/>
+-> Este es un problema conocido y los desarrolladores esperan solucionarlo lo antes posible. La mejor opción es conectarse por IP y contraseña.
+2. El servidor tiene una fuga de memoria.<br/>
+-> También son conscientes de ello.<br/>
+-> La opción bEnableInvaderEnemy parece tener un gran impacto en el uso actual de RAM. Deshabilitarla podría ser una opción.<br/>
+-> Consejo: Programe un reinicio del servidor cada 6h. Puede ajustar el valor en función de su memoria RAM.
+3. El servidor no aparece en la lista de servidores de Steam.<br/>
+-> Es posible que esto no sea compatible nunca.
+4. El archivo de configuración se borra/restablece al reiniciar el servidor.<br/>
+-> Si el puerto de su servidor es diferente al puerto por defecto (8211), debe ajustar el puerto en el archivo de configuración. <Code>Pal/Saved/Config/LinuxServer/PalWorldSettings.ini</Code>.<br/>
+-> Antes de editar el archivo de configuración, asegúrese siempre de detener completamente el servidor. De lo contrario, no se guardarán todos los cambios.
+</Callout>
+
+<Steps>
+
+### Paso 1
+
+Asegúrese de que el servidor está desconectado.
+
+![](https://i.imgur.com/gRntjqt.png)
+
+### Paso 2
+
+Localiza el archivo <Code>DefaultPalWorldSettings.ini</Code> y ábrelo haciendo clic sobre él.
+
+![](https://i.imgur.com/sYL2uBp.png)
+
+### Paso 3
+
+Cuando abras el archivo <Code>DefaultPalWorldSettings.ini</Code> verás algo parecido a la siguiente imagen. Simplemente copia todo el contenido.
+
+![](https://i.imgur.com/G7QRX6m.png)
+
+
+### Paso 4
+
+Ahora ve a la carpeta <Code>Pal > Saved > Config > LinuxServer</Code> y abre el archivo <Code>PalWorldSettings.ini</Code>. Dentro del archivo debe pegar el contenido copiado anteriormente desde <Code>DefaultPalWorldSettings.ini</Code>
+
+![](https://i.imgur.com/PltTfx0.png)
+
+![](https://i.imgur.com/x8wpOi8.png)
+
+### Paso 5
+
+Ahora puedes editar los parámetros y ajustes que necesites, **recuerda guardar el archivo usando el botón azul que dice "Save content"**.
+
+<Callout type="info">
+    Al iniciar y detener el servidor se borra el contenido del archivo PalWorldSettings.ini, recomendamos guardarlo en algún lugar de su PC para recordar los parámetros o ajustes realizados.
+</Callout>
+
+
+</Steps>
+
+## Explicación de los parámetros
+
+| Parámetro                                     | Descripción                                                                        |
+|-----------------------------------------------|------------------------------------------------------------------------------------|
+| Difficulty                                    | None - Doesn't seem to matter for dedicated servers.                               |
+| DayTimeSpeedRate=1.000000                     | Changes how long daytime lasts.                                                    |
+| NightTimeSpeedRate=1.000000                   | Changes how long night lasts. Suggested 5.000000                                   |
+| ExpRate=1.000000                              | Modifies how much experience you get.                                              |
+| PalCaptureRate=1.000000                       | How likely you are to capture Pals.                                                |
+| PalSpawnNumRate=1.000000                      | How frequently Pals spawn.                                                         |
+| PalDamageRateAttack=1.000000                  | How much damage Pals do.                                                           |
+| PalDamageRateDefense=1.000000                 | How much damage Pals take.                                                         |
+| PlayerDamageRateAttack=1.000000               | How much damage players do.                                                        |
+| PlayerDamageRateDefense=1.000000              | How much damage players take.                                                      |
+| PlayerStomachDecreaseRate=1.000000            | Rate at which hunger decreases.                                                    |
+| PlayerStaminaDecreaseRate=1.000000            | Rate at which stamina decreases.                                                   |
+| PlayerAutoHPRegeneRate=1.000000               | How quickly HP will be automatically restored when hurt.                           |
+| PlayerAutoHpRegeneRateInSleep=1.000000        | How much HP is regenerated while sleeping.                                         |
+| PalStomachDecreaseRate=1.000000               | Rate at which Pal hunger decreases.                                                |
+| PalStaminaDecreaseRate=1.000000               | Rate at which Pal stamina decreases.                                               |
+| PalAutoHPRegeneRate=1.000000                  | How quickly Pal HP will be automatically restored when hurt.                       |
+| PalAutoHpRegeneRateInSleep=1.000000           | How much Pal HP is regenerated while sleeping.                                     |
+| BuildObjectDamageRate=1.000000                | Damage to objects.                                                                 |
+| BuildObjectDeteriorationDamageRate=1.000000   | How much damage built objects will take over time.                                 |
+| CollectionDropRate=1.000000                   | Rate at which items are gathered from things like trees or rocks.                  |
+| CollectionObjectHpRate=1.000000               | How much HP breakable world items have.                                            |
+| CollectionObjectRespawnSpeedRate=1.000000     | How quickly objects like trees respawn.                                            |
+| EnemyDropItemRate=1.000000                    | Frequency enemies will drop items.                                                 |
+| DeathPenalty=All                              | Determines what is dropped on death. Can be set to none.                           |
+| bEnableAimAssistPad=True                      | Lets you enable or disable aim assist.                                             |
+| bEnableAimAssistKeyboard=False                | Lets you enable or disable aim assist.                                             |
+| DropItemMaxNum=3000                           | Max amount of dropped items allowed at one time.                                   |
+| BaseCampMaxNum=128                            | Max amount of bases that can be built at once.                                     |
+| BaseCampWorkerMaxNum=15                       | Max amount of worker Pals that can be at a camp.                                   |
+| DropItemAliveMaxHours=1.000000                | How long dropped items will stay spawned before disappearing.                      |
+| bAutoResetGuildNoOnlinePlayers=False          | If true, a guild will be disbanded if no players are online.                       |
+| AutoResetGuildTimeNoOnlinePlayers=72.000000   | How quickly an inactive guild will be disbanded.                                   |
+| GuildPlayerMaxNum=20                          | Max guild player number.                                                           |
+| PalEggDefaultHatchingTime=72.000000           | How long it takes to hatch Pal eggs. Suggested 15.000000                           |
+| WorkSpeedRate=1.000000                        | How quickly Pals work.                                                             |
+| CoopPlayerMaxNum=4                            | Max amount of players in a party.                                                  |
+| ServerPlayerMaxNum=32                         | Max players allowed on a server (limit of 32).                                     |
+| ServerName="Default Palworld Server"          | Server name                                                                        |
+| ServerDescription=""                          | What is shown when selecting the server in the list. Don't Touch this              |
+| AdminPassword=""                              | Password used to grant admin access.                                               |
+| ServerPassword=""                             | Password needed for regular players to join.                                       |
+
+<Callout type="warning">
+    Algunos parámetros como **ServerPlayerMaxNum**, **ServerName**, **ServerPassword** y **AdminPassword** se configuran desde la pestaña Startup.
+</Callout>
+
+✅ ¡Eso es todo! Ya puedes iniciar el servidor. Si tienes algún problema, contacta con nosotros por [Discord](https://discord.vexyhost.com/) para que podamos ayudarte.
