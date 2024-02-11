@@ -1,0 +1,108 @@
+# Optimize your server to reduce lag, crashes and rubberbanding!
+
+import { Callout, Steps, Code } from 'nextra/components'
+
+<Callout type="warning">
+    Este juego está en Early Access y actualmente experimenta fugas de RAM y CPU. Los desarrolladores están trabajando para solucionarlo, pero debes saber que no es un problema de nuestro lado.
+</Callout>
+
+<Callout type="info">
+## Problemas conocidos / Preguntas frecuentes
+1. El servidor no aparecerá en la pestaña Community-Server.<br/>
+-> Este es un problema conocido y los desarrolladores esperan solucionarlo lo antes posible. La mejor opción es conectarse por IP y contraseña.
+2. El servidor tiene una fuga de memoria.<br/>
+-> También son conscientes de ello.<br/>
+-> La opción bEnableInvaderEnemy parece tener un gran impacto en el uso actual de RAM. Deshabilitarla podría ser una opción.<br/>
+-> Consejo: Programe un reinicio del servidor cada 6h. Puede ajustar el valor en función de su memoria RAM.
+3. El servidor no aparece en la lista de servidores de Steam.<br/>
+-> Es posible que esto no sea compatible nunca.
+4. El archivo de configuración se borra/restablece al reiniciar el servidor.<br/>
+-> Si el puerto de su servidor es diferente al puerto por defecto (8211), debe ajustar el puerto en el archivo de configuración. <Code>Pal/Saved/Config/LinuxServer/PalWorldSettings.ini</Code>.<br/>
+-> Antes de editar el archivo de configuración, asegúrese siempre de detener completamente el servidor. De lo contrario, no se guardarán todos los cambios.
+</Callout>
+
+<Steps>
+
+### Paso 1
+
+Si puedes unirte a tu servidor pero tus amigos no pueden hacerlo. Busca el archivo <Code>Palworldsettings.ini</Code> en el File Manager dentro de la carpeta <Code>Pal/Saved/Config/LinuxServer/Palworldsettings.ini</Code> y cambia el parametro <Code>bIsMultiplay=False</Code> a <Code>bIsMultiplay=True</Code> e inicia tu servidor. **Asegúrese de que su servidor está apagado cuando realice los cambios.**
+
+### Paso 2
+
+Cambiando los siguientes parametros puede reducir las caídas del servidor:
+
+- <Code>DropItemMaxNum=3000</Code> --> <Code>DropItemMaxNum=500</Code>
+
+- <Code> DropItemAliveMaxHours=0.500000</Code>
+
+- <Code>bEnableInvaderEnemy=True</Code> --> <Code>bEnableInvaderEnemy=False</Code>
+
+### Paso 3
+
+<Code>Pal/Saved/Config/LinuxServer/Engine.ini</Code> puede ayudar a aliviar estos problemas.
+
+<Callout type="info">
+Estos ajustes deberían ayudar a optimizar tu servidor Palworld, reduciendo el lag y el rubberbanding. Realiza siempre una copia de seguridad de la configuración existente antes de realizar cambios, y supervisa el rendimiento del servidor después de la implementación para realizar los ajustes necesarios.
+</Callout>
+
+Copie y pegue lo siguiente. **TIENES QUE PEGARLO DEBAJO DEL TEXTO EXISTENTE**.
+
+```ini filename="Pal/Saved/Config/LinuxServer/Engine.ini"
+; Online Subsystem Utils Configuration
+; Adjusting tick rates for LAN and Internet servers to enhance the frequency of game state updates, 
+; leading to smoother gameplay and less desynchronization between server and clients.
+[/script/onlinesubsystemutils.ipnetdriver]
+LanServerMaxTickRate=100 ; Sets maximum ticks per second for LAN servers, higher rates result in smoother gameplay.
+NetServerMaxTickRate=100  ; Sets maximum ticks per second for Internet servers, similarly ensuring smoother online gameplay.
+
+; Player Configuration
+; These settings are crucial for optimizing the network bandwidth allocation per player, 
+; allowing for more data to be sent and received without bottlenecking.
+[/script/engine.player]
+ConfiguredInternetSpeed=104857600  ; Sets the assumed player internet speed in bytes per second. High value reduces chances of bandwidth throttling.
+ConfiguredLanSpeed=104857600       ; Sets the LAN speed, ensuring LAN players can utilize maximum network capacity.
+
+; Socket Subsystem Epic Configuration
+; Tailoring the max client rate for both local and internet clients, this optimizes data transfer rates, 
+; ensuring that the server can handle high volumes of data without causing lag.
+[/script/socketsubsystemepic.epicnetdriver]
+MaxClientRate=104857600          ; Maximum data transfer rate per client for all connections, set to a high value to prevent data capping.
+MaxInternetClientRate=104857600  ; Specifically targets internet clients, allowing for high-volume data transfer without restrictions.
+
+; Engine Configuration
+; These settings manage how the game's frame rate is handled, which can impact how smoothly the game runs.
+; Smoother frame rates can lead to a better synchronization between client and server.
+[/script/engine.engine]
+bSmoothFrameRate=true    ; Enables the game engine to smooth out frame rate fluctuations for a more consistent visual experience.
+bUseFixedFrameRate=false ; Disables the use of a fixed frame rate, allowing the game to dynamically adjust frame rate for optimal performance.
+SmoothedFrameRateRange=(LowerBound=(Type=Inclusive,Value=30.000000),UpperBound=(Type=Exclusive,Value=100.000000)) ; Sets a target frame rate range for smoothing.
+MinDesiredFrameRate=30.000000 ; Specifies a minimum acceptable frame rate, ensuring the game runs smoothly at least at this frame rate.
+FixedFrameRate=100.000000     ; (Not active due to bUseFixedFrameRate set to false) Placeholder for a fixed frame rate if needed.
+NetClientTicksPerSecond=100   ; Increases the update frequency for clients, enhancing responsiveness and reducing lag.
+```
+
+He aquí una explicación detallada de lo que hace cada ajuste indicado anteriormente en el archivo Engine.ini para los servidores Palworld:
+
+- <Code>LanServerMaxTickRate</Code>: Este ajuste es para servidores de red de área local (LAN). Especifica el número máximo de actualizaciones, o "ticks", que el servidor procesa por segundo. Un mayor número de "ticks" (aquí 120) significa que el servidor se actualiza con más frecuencia, lo que puede resultar en un juego más fluido y respuestas más inmediatas a las acciones de los jugadores en un entorno LAN.
+
+- <Code>NetServerMaxTickRate</Code>: Similar al ajuste LAN, pero para servidores basados en Internet. También establece la frecuencia de transmisión máxima del servidor en 120. Esta alta tasa de tick es beneficiosa para reducir el lag y mejorar la capacidad de respuesta general del juego para los jugadores que se conectan a través de Internet.
+
+- <Code>ConfiguredInternetSpeed</Code>: Este ajuste es crucial para optimizar la asignación de ancho de banda de red para cada jugador. Establece una velocidad de Internet supuesta alta (100 Mbps) para los jugadores, lo que ayuda a reducir las posibilidades de estrangulamiento del ancho de banda de la red. Esto significa que el servidor espera que cada jugador tenga una conexión a Internet de alta velocidad y envía y recibe datos en consecuencia, lo que puede ayudar a reducir el retraso.
+
+- <Code>ConfiguredLanSpeed</Code>: Similar a la configuración de velocidad de Internet pero específicamente para jugadores en una LAN. Esto garantiza que los jugadores de una LAN puedan utilizar la máxima capacidad de su red sin limitaciones artificiales impuestas por el servidor de juego.
+
+- <Code>MaxClientRate</Code> y <Code>MaxInternetClientRate</Code>: Estos ajustes sirven para optimizar la velocidad de transferencia de datos de los clientes (jugadores). Ambos están configurados con el mismo valor alto (100 Mbps) y su objetivo es garantizar que el servidor pueda manejar grandes volúmenes de datos sin provocar retrasos. Esto es particularmente importante en escenarios donde hay mucha actividad de jugadores o cuando el juego está transmitiendo grandes cantidades de datos.
+
+- <Code>bSmoothFrameRate</Code>: Este ajuste permite al motor del juego suavizar las fluctuaciones de la velocidad de fotogramas. De este modo, se consigue una experiencia de juego más uniforme y visualmente estable. El suavizado de la frecuencia de imagen es especialmente beneficioso para mantener un equilibrio entre el rendimiento del juego y la calidad visual.
+
+- <Code>bUseFixedFrameRate</Code>: Configurada como "false", esta opción permite al juego ajustar dinámicamente la velocidad de fotogramas en lugar de fijarla en un valor fijo. Este ajuste dinámico puede mejorar el rendimiento general, ya que el juego puede adaptarse a las distintas demandas de procesamiento.
+
+- <Code>SmoothedFrameRateRange</Code>: Establece el rango objetivo para la velocidad de fotogramas suavizada, con un límite inferior de 30 FPS y un límite superior de 120 FPS. El juego intentará mantener la tasa de fotogramas dentro de este rango, suavizando cualquier salto o caída en la tasa de fotogramas para mantener una jugabilidad consistente.
+
+- <Code>MinDesiredFrameRate</Code>: Se trata de un umbral mínimo para la velocidad de fotogramas, fijado en 60 FPS. Es una línea de base para asegurar que, como mínimo, el juego se ejecuta sin problemas a esta velocidad de fotogramas.
+
+- <Code>NetClientTicksPerSecond</Code>: Aumentado a 120, este ajuste aumenta la frecuencia de las actualizaciones del cliente. Si las actualizaciones son más frecuentes, el estado del juego se actualiza más a menudo, lo que puede mejorar la respuesta y reducir el retraso, sobre todo en escenarios rápidos.
+
+</Steps>
+
+✅ ¡Eso es todo! Si tienes algún problema, contacta con nosotros por [Discord](https://discord.vexyhost.com/) para que podamos ayudarte.
