@@ -12,7 +12,7 @@ import { Callout } from 'nextra/components'
 
 ## Create a database
 
-Go to the Database section and click on `New Database`, a form will open in which you will have to name the database, you can also specify from which ip or hostname the database can be accessed, this is optional, you can leave it blank to allow connections from anywhere.
+Go to the Databases section and click on `New Database`, a form will open in which you will have to name the database, you can also specify from which ip or hostname the database can be accessed, this is optional, you can leave it blank to allow connections from anywhere.
 
 ## Manage a database with phpMyAdmin
 
@@ -23,3 +23,23 @@ Once the database is created, you will see it in the list. To see more informati
 If you click on the other popup tab icon, you will be redirected to the phpMyAdmin, this is a web panel in which you can manage in a visual way your MySQL database or also use SQL commands, import or export your database among other features. **To log into the phpMyAdmin you must use the username and password of the database, remember that this information can be seen by clicking on the eye icon.**
 
 ![](https://i.imgur.com/RSqeaWt.png)
+
+## Export database with phpMyAdmin
+
+To export your database, go to phpMyAdmin by clicking on the popup tab icon in the Game Panel. 
+
+![](https://i.imgur.com/RSqeaWt.png)
+
+After accessing your database with the database login details (you can see those login details in the eye icon) you should select the database and go to the Export tab in the phpMyAdmin and click Continue (The export method is recommended to leave it on Fast).
+
+![](https://i.imgur.com/VMyQhzj.png)
+
+## Import database with phpMyAdmin
+
+To import your database, you need to have on your PC the `.sql` file you are going to import, then go to phpMyAdmin by clicking on the popup tab icon in the Game Panel.
+
+![](https://i.imgur.com/RSqeaWt.png)
+
+After accessing your database with the database access data (you can see those access data in the eye icon) you should select the database and go to the Import tab in the phpMyAdmin, select the `.sql` file and then click Continue. (It is recommended to leave the rest of the default parameters as shown in the image)
+
+![](https://i.imgur.com/Yym2LaF.png)

@@ -1,0 +1,27 @@
+# Cómo funcionan las copias de seguridad
+
+import { Callout } from 'nextra/components'
+
+<Callout type="info">
+    Si tu servicio se da de baja, puedes abrir un ticket de soporte y preguntar si aún almacenamos los archivos, normalmente hacemos backups de todos los nodos a servidores externos cada 24hs, cada 7 días y cada 1 mes.
+</Callout>
+
+Las copias de seguridad son importantes en caso de necesitar recuperar archivos antiguos tras su borrado o pérdida.
+
+Siempre es recomendable hacer un backup de los archivos cada cierto tiempo, por si surge un imprevisto, necesidad de revertir los cambios o por un borrado accidental de archivos por parte del usuario, entonces se puede recuperar el error y volver a subir los archivos que se han borrado.
+
+También se recomienda tener una copia de seguridad local en tu dispositivo antes de que el servidor se dé de baja o se dejen de pagar las facturas, evitando así la pérdida de archivos.
+
+## Crear Copias de Seguridad
+
+Para hacer una copia de seguridad ve a la sección `Backups` y pulsa en `Create Backup`, debería aparecer un formulario donde puedes nombrar la copia de seguridad e indicar los ficheros que quieres ignorar (esto último es útil si quieres omitir una carpeta de la copia de seguridad).
+
+El bloqueo impide que se borre la copia de seguridad hasta que se desbloquee. Esto es útil si tienes copias de seguridad programadas y no quieres que se reemplacen.
+
+![](https://i.imgur.com/JPSEdwJ.png)
+
+## Restaurar o descargar copias de seguridad
+
+Una vez realizada la copia de seguridad, puede restaurarla o descargarla haciendo clic en el icono de los tres puntos. ⚠ Al pulsar el botón "Restore", la copia de seguridad se restaurará completamente en su servidor, reemplazando cualquier archivo más reciente.
+
+![](https://i.imgur.com/RZi3Bth.png)

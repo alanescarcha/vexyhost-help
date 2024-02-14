@@ -41,8 +41,8 @@ Pressing on the `New Task` button will allow you to set a task for your schedule
 
 Once the box is open you can select the type of schedules. Commands are game commands, so for Minecraft, if you wanted to say something in the server, you could put the `say` command. Making sure not to use a / for Minecraft.
 
-Power actions are restart, start, stop, and kill.
+Power actions are restart, start, stop, and kill (force stop).
 
-Backups allow you to make backups using the backup manager. If you have reached your backup limit, the oldest backup will be rotated.
+Backups allows you to make backups using the backup manager. If you have reached your backup limit, the oldest backup will be rotated unless the backup is locked.
 
 ![](https://i.imgur.com/jzZUoO2.png)

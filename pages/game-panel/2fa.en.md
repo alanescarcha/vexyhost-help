@@ -4,4 +4,4 @@
 
 To set up 2FA in your game panel account, you will need to go to the [Account](https://panel.vexyhost.com/account) section and under `Configure Two Factor` follow the steps below. You will need to download an authentication app for your phone (we recommend Google Authenticator or Microsoft Authenticator) and scan the QR code.
 
-Be sure to save the backup codes physically, such as on a piece of paper and in a safe place.
+Be sure to keep the security codes physically, for example on a piece of paper and in a safe place, so that if you ever lose your phone you can recover your 2FA with those security codes.

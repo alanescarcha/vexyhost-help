@@ -1,6 +1,6 @@
 # Add another user to your server
 
-If you want another person to be able to administer your server, you can add them in the users section. Go to Users section and then click on the `New User` button, a form like the one below will appear:
+If you want another person to be able to administer your server, you can add them in the Users section. Go to Users section and then click on the `New User` button, a form like the one below will appear:
 
 ![](https://i.imgur.com/8RQHtcT.png)
 

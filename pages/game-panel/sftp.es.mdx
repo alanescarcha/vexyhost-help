@@ -1,0 +1,30 @@
+# Cómo funciona SFTP
+
+SFTP es un protocolo de transferencia remota de archivos, necesitas un servidor SFTP y un cliente en ambos lados, el panel ya tiene el servidor SFTP, en esta guía te ayudaremos a configurar tu cliente SFTP.
+
+Nuestro panel tiene un administrador de archivos integrado que usará el 90% del tiempo. Sin embargo, si necesitas subir múltiples archivos, carpetas o archivos de más de 500MB necesitarás usar un cliente SFTP.
+
+## ¿SFTP o FTP?
+Si ya sabes algo de servidores, probablemente conozcas FTP, la diferencia entre SFTP y FTP es mínima, pero importante, SFTP proporciona mayor seguridad que FTP, ya que este protocolo encripta los archivos y datos al transferirlos, proporcionando mayor seguridad para ti y tus archivos.
+
+## Empecemos
+
+Primero necesitamos descargar un programa cliente que soporte el protocolo SFTP. Recomendamos usar FileZilla; sin embargo, otros programas como WinSCP también funcionarán bien.
+
+Puedes descargar FileZilla aquí: https://filezilla-project.org/download.php?type=client (Recuerda descargar la versión cliente, no la versión servidor).
+
+Después de instalar el programa ve al Game Panel y en la sección `Settings`, en `SFTP DETAILS`, copia los datos de host, puerto y nombre de usuario. **La contraseña es la misma que utilizas en tu cuenta para acceder al Game Panel.**
+
+![](https://i.imgur.com/chiGUhw.png)
+
+A continuación, coloque los datos en el programa, como se indica en la siguiente imagen.
+
+![](https://i.imgur.com/9lqOlWF.png)
+
+Una vez introducida la información, pulsa el botón de conexión rápida. Ya está, todo listo y conectado. ✅
+
+import { Callout } from 'nextra/components'
+
+<Callout type="warning" emoji="⚠️">
+    Recuerda que en las transferencias remotas de archivos siempre es mejor comprimir todos los archivos y/o carpetas en 1 único archivo comprimido `.zip` o `.tar.gz` y subir sólo ese, de esta forma la transferencia es mucho más rápida y evitas bloqueos por límites de conexión simultánea.
+</Callout> 

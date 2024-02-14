@@ -1,0 +1,22 @@
+# Cómo subir archivos
+
+Hay dos maneras de subir archivos a su servidor. Una es a través del Administrador de Archivos (File Manager), la otra es a través de SFTP. Aquí cubriremos el administrador de archivos. Para SFTP por favor mira el [artículo sobre SFTP](/game-panel/sftp).
+
+import { Callout } from 'nextra/components'
+
+<Callout type="warning" emoji="⚠️">
+    La subida de archivos desde el administrador de archivos está limitado a 500MB. Si tu archivo supera los 500MB considera usar [SFTP](/game-panel/sftp).
+</Callout> 
+
+## SFTP o Administrador de Archivos
+SFTP se puede utilizar si sus archivos son demasiado grandes para el administrador de archivos. El administrador de archivos tiene un tamaño máximo de subida de 500MB debido a nuestro mitigador de ataques DDoS Cloudflare. Si recibes un error de que el archivo es demasiado grande, usa [SFTP](/game-panel/sftp) para subirlo.
+
+## Subir archivos
+
+Subir archivos es sencillo. Si estás subiendo carpetas, primero tendremos que comprimir la carpeta. Si sólo estás subiendo un archivo entonces esto se puede subir directamente arrastrandolo al administrador de archivos.
+
+Para comprimir una carpeta o varios archivos, en tu PC haz clic con el botón derecho del ratón, busca "Enviar a" y luego "Carpeta comprimida (en zip)". Si estás en Windows 11, puede que tengas que pulsar primero mostrar más opciones. También puedes usar programas como Winrar o 7zip para comprimir a .zip **(⚠ No uses archivos comprimidos en .rar ya que los mismos se extraeran sin respetar el orden de carpetas ⚠)**.
+
+Una vez tengas el zip o los archivos que quieras subir, arrastra los archivos sobre la ventana del administrador de archivos. Esto iniciará la subida. También puedes pulsar el botón de subir, y navegar hasta los archivos que quieres subir.
+
+Una vez subidos los archivos, si son archivos comprimidos .zip puedes descomprimirlos haciendo clic con el botón derecho del ratón y pulsando "Descompress".

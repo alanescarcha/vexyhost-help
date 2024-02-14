@@ -1,0 +1,18 @@
+{
+    "login": "Iniciar sesión",
+    "start-server": "Iniciar tu servidor",
+    "subusers": "Agregar otro usuario",
+    "server-importer": "Herramienta Server Importer",
+    "backups": "Copias de seguridad",
+    "sftp": "Cómo funciona SFTP",
+    "swap": "¿Qué es la memoria SWAP?",
+    "subdomain": "Configurar un subdominio",
+    "schedules": "Tareas programadas",
+    "databases": "Bases de datos",
+    "2fa": "Configuración 2FA",
+    "upload-files": "Subir archivos",
+    "moving-files": "Mover archivos",
+    "open-port": "Crear puertos adicionales",
+    "reinstall": "Reinstalar el servidor",
+    "download-server": "Descargar tu servidor"
+}

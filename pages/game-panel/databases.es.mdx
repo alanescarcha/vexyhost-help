@@ -1,0 +1,45 @@
+# Configurar Bases de Datos
+
+A menudo los servidores necesitan bases de datos para ciertos addons, plugins o porque el propio juego lo necesita, nuestro panel te permite crear y gestionar bases de datos de una forma rápida y sencilla.
+
+Por defecto a cada servidor se le permite crear 2 bases de datos, si necesitas más puedes contactar con nosotros mediante ticket de soporte y solicitar más de forma gratuita, es posible que tengas que justificar el motivo (para evitar un mal uso de las mismas)
+
+import { Callout } from 'nextra/components'
+
+<Callout type="warning" emoji="⚠️">
+El uso de las bases de datos está orientado a ser utilizadas dentro del mismo servidor y para ese contexto (no podrás utilizar las bases de datos para tu página web o almacenar información que no esté relacionada con el servicio de alojamiento de juegos), cada base de datos que crees se almacena en el mismo nodo donde se encuentra tu servidor para evitar problemas de rendimiento en la conexión o latencia. **Siempre monitorizamos el uso de las bases de datos y las conexiones a las mismas para evitar ataques, usos inadecuados de las bases de datos y garantizar un rendimiento óptimo.**
+</Callout> 
+
+## Crear una base de datos
+
+Ve a la sección "Databases" y haz click en `New Database`, se abrirá un formulario en el que tendrás que ponerle un nombre a la base de datos, también puedes especificar desde que ip o hostname se puede acceder a la base de datos, esto es opcional, puedes dejarlo en blanco para permitir conexiones desde cualquier lugar.
+
+## Administrar una base de datos con phpMyAdmin
+
+Una vez creada la base de datos, la verás en la lista. Para ver más información, haz click en el icono del ojo, ahí verás los datos completos de la base de datos para que puedas conectarla a lo que necesites.
+
+![](https://i.imgur.com/ayXk28O.png)
+
+Si haces clic en el icono de la otra pestaña emergente, serás redirigido al phpMyAdmin, este es un panel web en el que podrás gestionar de forma visual tu base de datos MySQL o también utilizar comandos SQL, importar o exportar tu base de datos entre otras funcionalidades. **Para ingresar al phpMyAdmin debes utilizar el nombre de usuario y contraseña de la base de datos, recuerda que esta información la puedes ver haciendo clic en el icono del ojo.**
+
+![](https://i.imgur.com/RSqeaWt.png)
+
+## Exportar base de datos con phpMyAdmin
+
+Para exportar tu base de datos, ve al phpMyAdmin haciendo click en el icono de pestaña emergente en el Game Panel. 
+
+![](https://i.imgur.com/RSqeaWt.png)
+
+Luego de acceder a tu base de datos con los datos de acceso de la base de datos (puedes ver esos datos de acceso en el icono del ojo) deberás seleccionar la base de datos e ir a la pestaña Exportar en el phpMyAdmin y hacer click en Continuar. (El método de exportación se recomienda dejarlo en Rápido)
+
+![](https://i.imgur.com/VMyQhzj.png)
+
+## Importar base de datos con phpMyAdmin
+
+Para importar tu base de datos, necesitas tener en tu PC el archivo `.sql` que vas a importar, luego ve al phpMyAdmin haciendo click en el icono de pestaña emergente en el Game Panel.
+
+![](https://i.imgur.com/RSqeaWt.png)
+
+Luego de acceder a tu base de datos con los datos de acceso de la base de datos (puedes ver esos datos de acceso en el icono del ojo) deberás seleccionar la base de datos e ir a la pestaña Importar en el phpMyAdmin, seleccionar el archivo `.sql` y luego hacer click en Continuar. (Se recomienda dejar el resto de parámetros por defecto como se muestra en la imagen)
+
+![](https://i.imgur.com/Yym2LaF.png)
