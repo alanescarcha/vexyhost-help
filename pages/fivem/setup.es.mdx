@@ -1,0 +1,147 @@
+# Configuración inicial - FiveM
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+import { Code } from 'nextra/components'
+
+<Callout type="info">
+    FiveM no permite a los proveedores de hosting vender hosting FiveM, restringiendo solo un servidor por IP. Sin embargo, según los términos de servicio es posible alojar FiveM en VPS de cualquier proveedor, por eso VexyHost ofrece VPS Windows con las herramientas necesarias ya preinstaladas, desafortunadamente no podemos ofrecerlo como Game Hosting con nuestro panel de juego.
+</Callout>
+
+<Callout type="default">
+    Puertos abiertos configurados en el Firewall de Windows:
+    - 30120 (FiveM TCP/UDP)
+    - 40120 (txAdmin TCP)
+    - 65535 (Filezilla FTP Server TCP)
+    - 65534 (Filezilla Server TCP)
+</Callout>
+
+<Steps>
+
+### Paso 1
+Una vez haya adquirido su VPS FiveM Windows deberá acceder a través de RDP (Remote Desktop Protocol) a su VPS. Los datos de acceso al VPS y al Panel le serán enviados al mismo email con el que contrató el servicio. Para saber cómo conectarse mediante RDP consulte [este artículo](/vps-panel/rdp).
+
+Cuando accedas a tu VPS verás estos programas y carpetas en el escritorio.<br/>
+**HeidiSQL:** Este es un cliente SQL como phpMyAdmin para sus bases de datos MySQL.<br/>
+**XAMPP:** Es un programa que en este caso está configurado para alojar las bases de datos y un servidor FTP para poder gestionar sus archivos de forma remota.<br/>
+**Visual Studio Code:** Es un editor de código que le ayudará a editar los archivos de su servidor FiveM de una manera más fácil.<br/>
+**SERVER folder:** Esta carpeta alojará su servidor y los artifacts de FiveM que necesite. Esta carpeta ya está configurada para ser compartida por FTP. ⚠ **NO LA BORRE**.
+
+![](https://i.imgur.com/j28w4kK.png)
+
+### Paso 2
+
+En el VPS tendrá que ir a https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/ para descargar el artifact de FiveM que va a utilizar para su servidor. Puedes usar el navegador Edge que viene preinstalado.
+
+![](https://i.imgur.com/HdxMIVH.png)
+
+### Paso 3
+
+A continuación movemos el archivo descargado a la carpeta SERVER dentro de una nueva carpeta que podemos llamar artifact. Luego descomprimimos el archivo.
+
+![](https://i.imgur.com/n4JmXtH.png)
+
+### Paso 4
+
+Después de extraer el archivo descargado, ejecutamos el archivo FXServer.exe.
+
+![](https://i.imgur.com/0AykpvY.png)
+
+Al ejecutar el Servidor FiveM, se abrirá una consola mostrando el PIN a utilizar en txAdmin (en este caso el PIN es 9543):
+
+![](https://i.imgur.com/f6nV1oK.png)
+
+### Paso 5
+
+Ahora en su PC puede acceder al txAdmin de su servidor. La URL es <Code>http://\<IP del VPS>:40120</Code>, puedes verla en la consola de FiveM. También puedes acceder al txAdmin desde el mismo VPS si no quieres hacerlo desde tu PC.
+
+En el txAdmin simplemente introduzca el código que aparece en la consola de FiveM y clic en Link Account.
+
+![](https://i.imgur.com/UpJWoMy.png)
+
+### Paso 6
+
+Si no ha iniciado sesión en Cfx.re será redirigido para iniciar sesión.
+
+<Callout type="info">
+    Cfx.re es el sitio donde generará su key para activar su servidor en FiveM, esto es obligatorio para todos los servidores.
+</Callout>
+
+![](https://i.imgur.com/boBL1o5.png)
+
+Si ya ha iniciado sesión, simplemente autorice su cuenta y vaya al siguiente paso.
+
+![](https://i.imgur.com/i2W2Xmd.png)
+
+### Paso 7
+
+Después de autorizar su cuenta, txAdmin le pedirá que genere una contraseña.
+
+![](https://i.imgur.com/gb3QewO.png)
+
+### Paso 8
+
+Ahora debes configurar tu servidor, debes elegir tu Nombre de Servidor y el tipo de despliegue. Si no tienes un servidor pre-configurado te recomendamos que elijas "Popular Recipes".
+
+![](https://i.imgur.com/VugZeQM.png)
+
+En la plantilla puedes elegir entre las opciones que dicen FiveM. CFX Default descargará una plantilla base, ESX Legacy es una plantilla Roleplay así como QBCore con algunas diferencias, te recomendamos investigar las 3 plantillas. Si no estás seguro, puedes cambiar la plantilla más tarde si no te gusta.
+
+![](https://i.imgur.com/6JvtRQ0.png)
+
+<Callout type="warning">
+    Las opciones que dicen REDM son para servidores de Red Dead Redemption y no funcionan en este caso, ya que estás alojando un servidor de GTA 5.
+</Callout>
+
+### Paso 9
+
+Una vez completada la configuración de la plantilla, sigue la configuración de Recipe. Basta con hacer clic en Next en el paso 1.
+
+![](https://i.imgur.com/gHjhOFg.png)
+
+### Paso 10
+
+A continuación, deberá colocar su licencia de Cfx.re.
+
+![](https://i.imgur.com/mAPFTHh.png)
+
+Para ello, vaya a https://keymaster.fivem.net/, inicie sesión y haga clic en New server.
+
+![](https://i.imgur.com/PFL0km4.png)
+
+### Paso 11
+
+Ahora debes rellenar los datos solicitados. En IP del servidor debe poner la IP de su VPS, **en Tipo de servidor elija VPS y luego debajo ponga FiveM**, por último complete el captcha y haga click en Generate.
+
+<Callout type="warning">
+    Es importante que elijas VPS y debajo pongas FiveM para evitar inconvenientes en el futuro.
+</Callout>
+
+![](https://i.imgur.com/tWjHqJd.png)
+
+### Paso 12
+
+Luego verá un mensaje verde indicando que se ha enviado correctamente. Ahora debe copiar la clave y pegarla en su txAdmin.
+
+![](https://i.imgur.com/FVc1iWE.png)
+
+</Steps>
+
+✅ ¡Eso es todo! Después de completar la configuración final en txAdmin deberías ver la consola de tu servidor.
+
+![](https://i.imgur.com/DMPLBYm.png)
+
+Podrá conectarse a su servidor FiveM, puede encontrar su servidor buscándolo por nombre o en la consola (tecla F8) escriba: <Code>connect \<IP del VPS></Code>
+
+![](https://i.imgur.com/L4O7C8s.png)
+
+<Callout type="default">
+Con el comando <Code>/tx</Code> en el chat (pulsando la tecla T) puedes abrir el menú Admin del juego.
+</Callout>
+![](https://i.imgur.com/6N2qK4G.png)
+
+<Callout type="warning">
+Para poder conectarte vía FTP y subir tus archivos desde tu PC debes seguir [este artículo](/fivem/ftp).
+</Callout>
+
+Si tienes algún problema con la instalación de tu servidor contacta con nosotros por ticket de soporte o en nuestro [Discord](https://discord.vexyhost.com/) para que podamos ayudarte. En la mayoría de los casos incluso podemos hacer la instalación por ti.

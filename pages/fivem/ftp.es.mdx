@@ -1,0 +1,51 @@
+# Acceso FTP - FiveM
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+<Callout type="info">
+    FTP ya está configurado en la instalación de XAMPP en Windows, sólo es necesario añadir un usuario y asignarle un grupo.
+</Callout>
+
+<Steps>
+
+### Paso 1
+
+Abre el programa XAMPP, e inicia FileZilla.
+
+![](https://i.imgur.com/2IwX8Ie.png)
+
+### Paso 2
+
+Cuando FileZilla esté iniciado, haz click en el botón Admin en XAMPP, se abrirá la ventana del Servidor FileZilla, haz click en el icono de usuarios.
+
+![](https://i.imgur.com/Aly4Fwi.png)
+
+### Paso 3
+
+Ahora haga clic en Add, introduzca un usuario y asegúrese de **seleccionar el grupo Server Admin**.
+
+![](https://i.imgur.com/i0iiGGi.png)
+
+![](https://i.imgur.com/uTPrJWe.png)
+
+
+### Paso 4
+
+Después de añadir el usuario debe establecer una contraseña, marque la casilla de contraseña e **introduzca una contraseña segura**. Finalmente haga click en OK para guardar.
+
+![](https://i.imgur.com/rVMRt4v.png)
+
+### Paso 5
+
+Por último, abra su Filezilla o cualquier otro programa cliente FTP e introduzca la IP de su VPS, el usuario y contraseña que configuró anteriormente y **especifique el puerto 65535**.
+
+![](https://i.imgur.com/6PNVpnU.png)
+
+<Callout type="warning">
+    **Recuerda utilizar el puerto 65535**, de lo contrario no podrás conectarte.
+</Callout>
+
+</Steps>
+
+✅ ¡Eso es todo! Si tienes algún problema con la conexión FTP contáctanos por ticket de soporte o en nuestro [Discord](https://discord.vexyhost.com/) para que podamos ayudarte.
