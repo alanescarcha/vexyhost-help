@@ -1,0 +1,49 @@
+# Conexión mediante SSH
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+<Callout>
+SSH sólo está disponible en Linux.
+</Callout>
+
+## Terminal Windows
+<Steps>
+### Paso 1
+Abra el terminal de Windows, puede buscar `CMD` en Windows.
+
+### Paso 2
+Cuando abras la terminal, debes introducir este comando: `ssh root@<ip>` (Sustituye `<ip>` por la IP de tu servidor. ej: `ssh root@1.1.1.1`)
+
+<Callout type="info">
+Por defecto el usuario SSH es `root`. Si recibes un mensaje de clave de fingerprint key, simplemente escribe `yes` y Enter.
+</Callout>
+
+![](https://i.imgur.com/wmLOPLt.png)
+
+### Paso 3
+A continuación, debe introducir la contraseña de usuario root, la contraseña se envía por correo cuando se creó su VPS. Si olvidaste la contraseña o perdiste el correo, puedes cambiar la contraseña de tu VPS en [este artículo](/vps-panel/vps-password).
+
+</Steps>
+
+## PuTTY
+<Steps>
+### Paso 1
+Abra el programa PuTTY, puede descargarlo de https://www.putty.org/
+
+### Paso 2
+Cuando abras el programa, debes ingresar la IP y el Puerto SSH de tu VPS y luego hacer click en `Open`. (No olvides seleccionar SSH en el tipo de conexión).
+
+<Callout type="info">
+Por defecto el puerto SSH es el 22. Si recibes un mensaje de clave de fingerprint key, simplemente escribe `yes` y Enter.
+</Callout>
+
+![](https://i.imgur.com/VEm5P5s.png)
+
+### Paso 3
+
+Luego se abrirá una ventana donde debes ingresar el usuario, por defecto es `root` y luego debes ingresar la contraseña del usuario root, la contraseña es enviada por correo cuando tu VPS fue creado. Si olvidaste la contraseña o perdiste el correo, puedes cambiar la contraseña de tu VPS en [este artículo](/vps-panel/vps-password).
+
+![](https://i.imgur.com/ajjQ7NR.png)
+
+</Steps>

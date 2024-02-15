@@ -1,0 +1,77 @@
+# Conexión mediante VNC
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+<Callout>
+VNC funciona en Windows y Linux, esta funcionalidad es útil cuando te quedas sin acceso al servidor vía SSH en el caso de Linux o RDP en el caso de Windows, por ejemplo cuando activas un firewall por error sin configurarlo antes y te quedas sin conexión remota. VNC es como un monitor conectado al servidor, independientemente de la red o configuración de tu VPS siempre tendrás acceso a él.
+</Callout>
+
+
+## Linux
+<Steps>
+### Paso 1
+Vaya a su [panel VPS](https://vps.vexyhost.com/) y haga clic en el icono que se muestra en la siguiente imagen.
+![](https://i.imgur.com/VNkMkQJ.png)
+
+### Paso 2
+Una nueva ventana se abrirá, haga clic en **Launch HTML 5 VNC Client**.
+![](https://i.imgur.com/ANEqXM3.png)
+
+### Paso 3
+Se abrirá una nueva ventana emergente donde podrás acceder a la consola Linux como si tuvieras un monitor conectado al servidor. Aquí podrás ejecutar los comandos que necesites, recuerda que primero debes iniciar sesión en el servidor (como en SSH).
+![](https://i.imgur.com/dcWmgXz.png)
+</Steps>
+
+## Windows
+<Steps>
+### Paso 1
+Vaya a su [panel VPS](https://vps.vexyhost.com/) y haga clic en el icono que se muestra en la siguiente imagen.
+![](https://i.imgur.com/xNyqSDY.png)
+
+### Paso 2
+Una nueva ventana se abrirá, haga clic en **Launch HTML 5 VNC Client**.
+![](https://i.imgur.com/ANEqXM3.png)
+
+### Paso 3
+Se abrirá una nueva ventana emergente donde podrás acceder a Windows como si tuvieras un monitor conectado al servidor. Recuerde que primero debe iniciar sesión en Windows.
+![](https://i.imgur.com/TgSm5v1.png)
+
+<Callout type="info">
+Para desbloquear la pantalla de inicio de sesión, debes abrir el menú de opciones de VNC, hacer clic en la primera opción (Mostrar teclas adicionales) y luego hacer clic en la última opción (Enviar Ctrl-Alt-Supr), esto te mostrará el campo para ingresar la contraseña de Administrador.
+![](https://i.imgur.com/kQvR15z.png)
+</Callout>
+</Steps>
+
+## Usar software cliente VNC externo
+Si no desea utilizar el navegador web con noVNC, puede utilizar un programa en su PC para acceder al VNC de su VPS, le recomendamos utilizar [VNC Viewer](https://www.realvnc.com/connect/download/viewer/).
+
+Para ver los datos de acceso VNC vaya a `Settings` y luego a la pestaña `VNC`. Allí debes copiar el **IP** y **Puerto** de VNC para colocarlos en el programa cliente de VNC, en este caso VNC Viewer.
+
+![](https://i.imgur.com/xwmKx5y.png)
+
+<Callout type="info">
+En este programa el formato es `<IP>:<Puerto>` (insertando `:` entre la IP y el Puerto)
+</Callout>
+![](https://i.imgur.com/zyOrOIs.png)
+
+Si recibe un mensaje de encriptación al conectarse, simplemente haga clic en continuar. A continuación, se le pedirá la contraseña VNC, esta contraseña se puede encontrar en el último correo electrónico enviado a usted por el panel de VPS cuando se creó su VPS. Si no la recuerda, puede restablecerla siguiendo [estos pasos](/vps-panel/vnc#cambiar-contraseña-del-vnc).
+
+![](https://i.imgur.com/ZUt3OxY.png)
+
+Luego simplemente sigue los pasos dependiendo de si tu VPS es Windows o Linux:
+- [Windows](/vps-panel/vnc#paso-3-1)
+- [Linux](/vps-panel/vnc#paso-3)
+
+## Cambiar contraseña del VNC
+
+Si no recuerdas tu contraseña VNC o perdiste el email con los datos de acceso VNC, puedes restablecerla desde el [panel VPS](https://vps.vexyhost.com/).
+
+Vaya a `Settings` y luego en la pestaña `VNC Password`, allí introduzca la nueva contraseña VNC y repita para confirmar. **Utilice una contraseña segura**
+
+<Callout type="info">
+Es posible que necesite **reiniciar el VPS desde el panel** para que se establezca la nueva contraseña VNC. Para aprender a reiniciar tu VPS desde el panel sigue [este artículo](/vps-panel/start-vps).
+</Callout>
+
+![](https://i.imgur.com/UbOjLN7.png)
+
