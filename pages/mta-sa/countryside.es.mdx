@@ -1,0 +1,85 @@
+# Cómo instalar Countryside RP
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+<Steps>
+
+### Paso 1
+Vaya a la pestaña **MTA:SA GM Installer** de su servidor.
+
+![](https://i.imgur.com/9usqk4d.png)
+
+### Paso 2
+Elige **Countryside RP** para instalar, luego haz clic en el botón **Install**, te pedirá que confirmes la instalación.
+
+<Callout type="warning">
+Recuerda que **esto borrará todos tus archivos que tengas en el servidor**, te recomendamos generar un Backup antes de continuar.
+</Callout>
+
+![](https://i.imgur.com/HFG7fta.png)
+
+### Paso 3
+Una vez finalizada la instalación se mostrará un mensaje como el siguiente:
+![](https://i.imgur.com/ItwX4qu.png)
+
+### Paso 4
+Ahora debes ir al **File Manager** y descargar el archivo **gmrp.sql** en tu PC.
+
+![](https://i.imgur.com/L6kS4eB.png)
+
+### Paso 5
+A continuación debes ir a **Databases** y crear una base de datos para tu GM.
+
+<Callout type="warning">
+Debes usar una base de datos nueva, también recomendamos dejar **CONNECTIONS FROM** vacio sin completar.
+</Callout>
+
+### Paso 6
+Una vez creado, debes ir a phpMyAdmin para importar el archivo server.sql que descargamos anteriormente. Debes hacer click en el icono que se muestra a continuación.
+
+![](https://i.imgur.com/jb32AKv.png)
+
+### Paso 7
+Ahora deberás copiar los datos de acceso a la base de datos, puedes verlos haciendo click en el icono que se muestra a continuación.
+
+![](https://i.imgur.com/4u0xPts.png)
+
+### Paso 8
+Luego de colocar en el phpMyAdmin el usuario y contraseña de la base de datos, deberás seleccionar la base de datos.
+
+<Callout type="info">
+Asegúrate de que tu base de datos aparece en la parte superior para que sepas que está correctamente seleccionada.
+</Callout>
+
+![](https://i.imgur.com/bwx2qcp.png)
+
+### Paso 9
+Ahora debes hacer clic en **Import**.
+
+![](https://i.imgur.com/b4fLw2n.png)
+
+### Paso 10
+Asegúrate de que el nombre de la base de datos es el correcto, luego selecciona el archivo **gmrp.sql** que descargamos anteriormente y haz clic en **Continuar**.
+
+![](https://i.imgur.com/vRLExD4.png)
+
+### Paso 11
+Al finalizar, si todo ha ido bien, se mostrará un mensaje como el siguiente indicando que la importación se ha realizado correctamente:
+
+![](https://i.imgur.com/Vy0GDyV.png)
+
+### Paso 12
+Ahora ve al **File Manager** y edita el siguiente archivo: `mods > deathmatch > resources > mysql > mysql.lua`.
+
+![](https://i.imgur.com/hRM4smt.png)
+
+### Paso 13
+Debes colocar en el archivo `mysql.lua` los datos de acceso a la base de datos del [paso 7](#paso-7) y guardar el archivo. `share` no debe ser modificado. Después de guardar el archivo editado, puedes iniciar el servidor.
+
+
+</Steps>
+
+<Callout type="info">
+Si tiene algún problema al iniciar el servidor consulte el siguiente artículo que explica algunos errores comunes, [click aquí](/mta-sa/common-errors). También puede contactar con nosotros mediante ticket de soporte para que podamos ayudarle.
+</Callout>

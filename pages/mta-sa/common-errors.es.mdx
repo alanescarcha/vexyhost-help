@@ -1,10 +1,10 @@
-# Common errors in MTA:SA servers
+# Errores comunes en los servidores MTA:SA
 
 import { Callout } from 'nextra/components'
 
 ## Unable to connect to mysql
 
-This error in the console looks like this:
+Este error en la consola tiene el siguiente aspecto:
 ```go {3,7,10,13}
 [00:48:55] Server stopped!
 [00:48:55] Stopping resources....
@@ -26,8 +26,8 @@ This error in the console looks like this:
 [00:48:59] Closing SQLite3 database
 ```
 
-This error indicates that the GM is not being able to connect to the database, check that the resource in the **"sql"** folder is configured correctly.
-To configure the **"sql"** resource you must go to the File manager, go to the `mods > deathmatch > resources > sql` folder and edit the `mysql.lua` file:
+Este error indica que el GM no está pudiendo conectarse a la base de datos, comprueba que el recurso en la carpeta **"sql"** está configurado correctamente.
+Para configurar el recurso **"sql"** debes ir al File Manager, ir a la carpeta `mods > deathmatch > resources > sql` y editar el archivo `mysql.lua`:
 
 ```lua filename="/mods/deathmatch/resources/sql/mysql.lua"
 	local server = "127.0.0.1"
@@ -38,18 +38,18 @@ To configure the **"sql"** resource you must go to the File manager, go to the `
 	local socket = "/var/lib/mysql/mysql.sock"
 ```
 
-Make sure that the data in the mysql.lua file is correct. In the example above you would have to change the server, user, password and db.
+Asegúrese de que los datos en el archivo mysql.lua son correctos. En el ejemplo anterior tendrías que cambiar el servidor, usuario, contraseña y db.
 
 <Callout type="info">
-The server must never be `127.0.0.1`. You must use the hostname or host of the database, this is indicated in the database access data.
+El server nunca debe ser `127.0.0.1`. Debes usar el hostname o host de la base de datos, esto está indicado en los datos de acceso de la base de datos.
 </Callout>
 
 <Callout type="warning">
-The port is always **3306** and the socket is always **"/var/lib/mysql/mysql.sock"**. If you need to create a database for your GM click [here](/game-panel/databases)
+El puerto es siempre **3306** y el socket es siempre **"/var/lib/mysql/mysql.sock"**. Si necesitas crear una base de datos para tu GM haz click [aquí](/game-panel/databases)
 </Callout>
 
 ## MySQL module missing
-This error in the console looks like this:
+Este error en la consola tiene el siguiente aspecto:
 ```go {3,6,9}
 [04:13:55] Server stopped!
 [04:13:55] Stopping resources.........
@@ -65,11 +65,11 @@ This error in the console looks like this:
 [04:13:55] Closing SQLite3 database
 ```
 
-The error indicates that GM cannot find the `mta_mysql.so` module. This module must be in the `x64 > modules` folder, if you only have a module named `mta_mysql.dll` it will not work because the .dll files are for Windows. In VexyHost all MTA:SA servers run on Linux, so you will need the module in .so format.
+El error indica que GM no puede encontrar el módulo `mta_mysql.so`. Este módulo debe estar en la carpeta `x64 > modules`, si sólo tienes un módulo llamado `mta_mysql.dll` no funcionará porque los archivos .dll son para Windows. En VexyHost todos los servidores MTA:SA funcionan en Linux, por lo que necesitarás el módulo en formato .so.
 
-You can download the module from the official MTA wiki: https://wiki.multitheftauto.com/wiki/Modules/MTA-MySQL
+Puedes descargar el módulo desde el wiki oficial de MTA: https://wiki.multitheftauto.com/wiki/Modules/MTA-MySQL
 
-In case you have the correct module and it still does not load, it is possible that it is not configured in the `mtaserver.conf` file. To tell the server to load the `mta_mysql.so` module it must be configured as follows:
+En caso de que tengas el módulo correcto y aún así no cargue, es posible que no esté configurado en el archivo `mtaserver.conf`. Para decirle al servidor que cargue el módulo `mta_mysql.so` hay que configurarlo de la siguiente manera:
 
 ```html filename="/mods/deathmatch/mtaserver.conf" {3}
     <!-- Specifies the module(s) which are loaded with the server. To load several modules, add more <module>
@@ -77,5 +77,5 @@ In case you have the correct module and it still does not load, it is possible t
     <module src="mta_mysql.so"/>
 ```
 
-Placing `<module src="mta_mysql.so"/>` in the `mtaserver.conf` file should fix the problem eventually. If not, open a support ticket so we can help you.
+Colocar `<module src="mta_mysql.so"/>` en el archivo `mtaserver.conf` debería solucionar el problema eventualmente. Si no, abre un ticket de soporte para que podamos ayudarte.
 
