@@ -1,0 +1,114 @@
+# Cómo instalar mods (tModLoader)
+
+import { Callout, Steps, Code } from 'nextra/components'
+
+<Callout type="error">
+    tModLoader sólo está disponible para PC.
+</Callout>
+
+<Callout type="warning">
+    Para usar Mods necesitas usar tModLoader, los mods no funcionan en la versión Vanilla de Terraria. **Si tu servidor es Vanilla, abre un ticket de soporte en nuestro [Discord](https://discord.vexyhost.com/) y te ayudaremos a cambiar la versión a tModLoader.**
+</Callout>
+
+## Cómo instalar mods en tu servidor de Terraria
+
+<Steps>
+
+### Paso 1
+
+Apaga tu servidor y descarga el mod de Terraria que quieres instalar, el nombre del archivo debe tener la extensión <Code>.tmod</Code>. Por ejemplo: <Code>CalamityMod.tmod</Code>
+
+<Callout type="default">
+    Si tienes los mods descargados dentro del juego, puedes encontrar los archivos <Code>.tmod</Code> en tu PC dentro de las carpetas <Code>Documentos > My Games > Terraria > tModLoader > Mods</Code>
+
+    ![](https://i.imgur.com/esHl49r.png)
+</Callout>
+
+### Paso 2
+
+Ahora ve al File Manager y sube los archivos <Code>.tmod</Code> dentro de la carpeta llamada <Code>mods</Code>.
+
+![](https://i.imgur.com/8rCQRov.png)
+
+### Paso 3
+
+Dentro de la carpeta <Code>mods</Code> crea un archivo llamado <Code>enabled.json</Code>. Puede crear un archivo utilizando el botón de nuevo archivo en el File Manager.
+
+![](https://i.imgur.com/HgqsI5V.png)
+
+<Callout type="default">
+    Si los mods que vas a utilizar están habilitados en el juego, puedes subir el archivo <Code>enabled.json</Code> desde tu PC. Este archivo se encuentra en <Code>Documentos > My Games > Terraria > tModLoader > Mods</Code>
+
+    ![](https://i.imgur.com/tgF6Ihg.png)
+</Callout>
+
+### Paso 4
+
+Siguiendo el siguiente formato, añada los nombres de los mods al archivo <Code>enabled.json</Code>. Si subiste el archivo <Code>enabled.json</Code> desde tu PC es probable que los mods ya estén ahí, pero te recomendamos que lo compruebes para estar seguros.
+
+<Callout type="warning">
+    Recuerde que dentro del archivo <Code>enabled.json</Code> **sólo va el nombre sin el formato .tmod**.
+</Callout>
+
+#### Ejemplo para un mod:
+```json filename="enabled.json"
+[
+  "CalamityMod"
+]
+```
+#### Ejemplo para varios mods:
+```json filename="enabled.json"
+[
+   "CalamityMod",
+   "OtroModAqui",
+   "OtroModAqui"
+]
+```
+
+### Paso 5
+
+Guarde el archivo <Code>enabled.json</Code> e inicie su servidor.
+
+<Callout type="default">
+    Puedes escribir <Code>modlist</Code> en la consola para comprobar si los mods se han cargado correctamente.
+</Callout>
+
+</Steps>
+
+✅ ¡Eso es todo! Ya puedes unirte al servidor con los mods. Si tienes algún problema, contacta con nosotros por [Discord](https://discord.vexyhost.com/) para que podamos ayudarte.
+
+## Cómo instalar mods en tu cliente Terraria
+
+<Callout type="default">
+    Si aún no tienes tModLoader puedes descargarlo desde Steam, tModLoader es un Mod hecho por la comunidad por lo que es gratuito.
+</Callout>
+
+Puedes descargar mods fácilmente desde el juego en el Menú <Code>Workshop > Download Mods</Code>
+
+También puedes buscar mods con el buscador y para descargar los mods debes hacer click en el icono de descarga (aquellos mods que no tengan el icono es porque ya lo tienes descargado).
+
+![](https://i.imgur.com/t3wX4Uo.png)
+
+Sin embargo, si los mods no aparecen allí o tienes el archivo .tmod sigue estos pasos a continuación.
+
+<Steps>
+
+### Paso 1
+
+Descarga el mod de Terraria que quieras, el nombre del archivo debe tener la extensión <Code>.tmod</Code>. Por ejemplo <Code>CalamityMod.tmod</Code>
+
+### Paso 2
+
+Copie los mods descargados en la carpeta <Code>Documentos > My Games > Terraria > tModLoader > Mods</Code> en tu PC.
+
+![](https://i.imgur.com/esHl49r.png)
+
+### Paso 3
+
+Inicia tu TModLoader y los Mods aparecerán en el menú <Code>Workshop > Manage Mods</Code>. Sólo tienes que activar los mods que necesites o utilizar el botón "Enable All".
+
+![](https://i.imgur.com/smoOsrF.png)
+
+</Steps>
+
+✅ ¡Eso es todo! Ya puedes unirte al servidor con los mods. Si tienes algún problema, contacta con nosotros por [Discord](https://discord.vexyhost.com/) para que podamos ayudarte.
