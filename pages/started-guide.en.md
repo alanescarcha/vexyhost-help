@@ -22,13 +22,7 @@ Control Panel (cPanel): The link is indicated in the email that was sent to you.
 
 Your service information will be emailed to you once it has been set up. Look for emails with the following subjects based on what you have requested:
 
-**Minecraft Hosting:** Your server has been activated
-
-**MTA:SA Hosting:** Your server has been activated
-
-**Terraria Hosting:** Your server has been activated
-
-**Discord Bot Hosting:** Your server has been activated
+**Game Hosting:** Your server has been activated
 
 **Web Hosting:** Your Web Hosting has been activated
 

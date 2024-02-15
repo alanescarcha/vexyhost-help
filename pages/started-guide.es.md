@@ -22,13 +22,7 @@ Panel de Control (cPanel): El enlace se indica en el correo electrónico que se 
 
 La información de su servicio le será enviada por correo electrónico una vez que haya sido configurado. Busque correos electrónicos con los siguientes asuntos en función de lo que ha adquirido:
 
-**Minecraft Hosting:** Su servidor ha sido activado
-
-**MTA:SA Hosting:** Su servidor ha sido activado
-
-**Terraria Hosting:** Su servidor ha sido activado
-
-**Discord Bot Hosting:** Su servidor ha sido activado
+**Game Hosting:** Su servidor ha sido activado
 
 **Web Hosting:** Su Web Hosting ha sido activado
 

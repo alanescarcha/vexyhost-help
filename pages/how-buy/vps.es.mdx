@@ -1,0 +1,47 @@
+# VPS KVM
+
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+<Callout>
+    La diferencia entre un VPS estándar y un VPS KVM radica en la tecnología de virtualización utilizada. La virtualización KVM proporciona una mayor separación y aislamiento entre servidores virtuales, ya que cada uno de ellos se ejecuta en su propia máquina virtual con su propio kernel y recursos dedicados, lo que la convierte en una verdadera virtualización de hardware. Esto significa que los recursos asignados a un VPS KVM están 100% garantizados y no son compartidos con otros VPS en el mismo servidor físico o nodo, a diferencia de un VPS estándar donde los recursos son compartidos. Esto suele ser más adecuado para aplicaciones que requieren mayor seguridad, rendimiento y control sobre los recursos del servidor, razón por la cual sólo ofrecemos VPS KVM.
+</Callout>
+
+<Steps>
+
+### Paso 1 - Elegir plan
+Vaya a [Planes de VPS](https://vexyhost.com/vps/). Elija el plan que mejor se adapte a sus necesidades. Si no está seguro de cuál elegir, puede ponerse en contacto con el soporte para obtener ayuda.
+
+### Paso 2 - Elija el ciclo de facturación
+A continuación, tendrá que elegir el ciclo de facturación. Puedes elegir pagar tu servicio mensual, trimestral, semestral o anualmente. **Cuanto más largo sea el periodo que elijas, más descuento recibirás.**
+
+| Ciclo | Meses |
+| ------ | ------ |
+| Mensual | Cada mes |
+| Trimestral | Cada 3 meses |
+| Semestral | Cada 6 meses |
+| Anual | Cada 12 meses |
+
+### Paso 3 - Ubicación del servidor
+En la sección "Location", puede elegir la ubicación de su servidor. La mayoría de las veces, las ubicaciones mostradas tienen stock disponible. Sin embargo, es posible que una ubicación no tenga existencias en ese momento, y su servidor se creará en una ubicación cercana.
+
+### Paso 4 - Copias de seguridad
+En la sección "Backups", le ofrecemos la posibilidad de acceder gratuitamente a las copias de seguridad. Puede crear copias de seguridad y restaurarlas hasta 10 veces al mes por cada acción de copia de seguridad.
+
+<Callout type="info">
+Estas copias de seguridad no se pueden descargar ya que son imágenes de virtualización KVM.
+</Callout> 
+
+### Paso 5 - Sistema Operativo
+En la sección "Operating System", deberá elegir el sistema operativo para su VPS. Siempre intentamos mantener las últimas versiones y algunas versiones anteriores estables.
+
+<Callout type="warning">
+El plan **Micro S** no tiene la posibilidad de instalar Windows Server porque este sistema operativo requiere al menos 4GB de RAM para poder iniciar.
+</Callout> 
+
+### Paso 6 - Revisión y Pago
+👀 Revisa el resumen de tu compra y haz clic en el botón Continuar. En la página de resumen, puedes introducir un código de descuento si lo tienes y elegir el metodo de pago. Una vez completes la página resumen, se generará el pedido y serás redirigido a la pasarela de pago según el metodo de pago elegido.
+
+</Steps>
+
+**✔ ¡Genial! Ahora puedes proceder con el pago. Si tienes alguna duda sobre el pago de tus facturas, puedes consultar nuestro tutorial [aquí](/payments-country).** Una vez recibamos el pago, te enviaremos un email confirmando la activación de tus servicios y los datos de acceso al VPS.
