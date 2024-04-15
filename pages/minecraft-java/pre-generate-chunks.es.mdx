@@ -1,0 +1,128 @@
+# Cómo pregenerar chunks en tu mundo de Minecraft
+
+import { Steps, Code, Callout } from 'nextra/components';
+
+## Vanilla / Plugins
+
+<Callout type="default">
+    Recomendamos usar el plugin [Chunky](https://www.spigotmc.org/resources/chunky.81534/) ya que el mismo utiliza el algoritmo natural de generación de chunks del juego, evitando chunks corruptos o cortados como sucede con otros plugins que prometen ser más rápidos.
+</Callout>
+
+<Steps>
+
+### Paso 1
+
+Tu servidor debe soportar plugins, puedes usar versiones como Paper o Spigot. Luego tienes que subir el plugin [Chunky](https://www.spigotmc.org/resources/chunky.81534/) a tu servidor, dentro de la carpeta plugins. En VexyHost puedes instalar el plugin directamente desde la pestaña <Code>Plugins</Code> en el Game Panel. **Recuerda antes de instalar un plugin detener tu servidor.**
+
+![](https://i.imgur.com/raaAEcM.png)
+
+### Paso 2
+
+Luego iniciamos nuestro servidor y en la consola verificamos que el plugin haya cargado correctamente con el comando <Code>plugins</Code>. También podemos aprovechar para darnos OP desde la consola con el comando: <br />
+<Code>op \<player></Code>
+
+<Callout type="info">
+    Recuerda  que en juegos como Minecraft NO debes usar el slash <Code>/</Code> para los comandos en la consola.
+</Callout>
+
+![](https://i.imgur.com/BtlLGP6.png)
+
+### Paso 3
+
+<Callout type="info">
+    En este paso usaremos la siguiente secuencia de comandos:
+    - <Code>worldborder set \<value></Code>
+    - <Code>chunky world \<world name></Code>
+    - <Code>chunky worldborder</Code>
+    - <Code>chunky start</Code>
+</Callout>
+
+Entramos a nuestro servidor y con el comando <Code>/worldborder set</Code> en el juego, podremos definir el tamaño del borde del mundo actual donde nos encontramos. Por ejemplo <Code>/worldborder set 10000</Code> (esto quiere decir que el mapa tendrá un límite de 10.000 bloques en las 4 direcciones)
+
+Luego usamos el comando <Code>/chunky world</Code> para definir en que mundo vamos a realizar la pregeneración. En este ejemplo será en el mundo llamado <Code>world</Code>, entonces usamos <Code>/chunky world world</Code>.
+
+```log filename="Minecraft Chat" copy=false
+[Chunky] World changed to world.
+```
+
+Ahora definimos el área que vamos a pregenerar en ese mundo, en este caso la misma área que tiene el worldborder que establecimos anteriormente.
+<Code>/chunky worldborder</Code>
+
+```log filename="Minecraft Chat" copy=false
+[Chunky] Center changed to 0, 0.
+[Chunky] Radius changed to 5000.
+```
+
+<Callout type="info">
+El Radius o radio es siempre la mitad del diámetro total, como en nuestro caso establecimos un diámetro de 10.000 bloques desde el worldborder, Chunky cambiará el Radius o radio a 5.000 para pregenerar el total de los 10.000 bloques en las 4 direcciones.
+</Callout>
+
+Por ultimo solo nos queda ejecutar <Code>/chunky start</Code> para que empiece a pregenerar los chunks. Podras ver el estado de la pregeneración desde la consola del servidor.
+
+```log filename="Server Console" copy=false
+[20:53:54 INFO]: [Chunky] Task running for world. Processed: 125 chunks (0.03%), ETA: 0:34:28, Rate: 190.0 cps, Current: 13, 6
+[20:53:56 INFO]: [Chunky] Task running for world. Processed: 194 chunks (0.05%), ETA: 1:05:25, Rate: 100.1 cps, Current: 15, 6
+[20:53:57 INFO]: [Chunky] Task running for world. Processed: 234 chunks (0.06%), ETA: 1:22:56, Rate: 78.9 cps, Current: 4, 13
+[20:53:58 INFO]: [Chunky] Task running for world. Processed: 268 chunks (0.07%), ETA: 1:37:34, Rate: 67.1 cps, Current: 7, 16
+[20:53:59 INFO]: [Chunky] Task running for world. Processed: 303 chunks (0.08%), ETA: 1:48:54, Rate: 60.1 cps, Current: 7, 19
+```
+
+<Callout type="warning">
+El ETA (Tiempo estimado) será cada vez mas preciso a medida que la pregeneración avanza. **Recuerda que Chunky utiliza la pregeneración de chunks natural del juego por lo que la misma no utilizará mas del 300% de CPU por mas que tengas mas CPU disponible**, esto es una limitación de la pregeneración de chunks del propio juego, forzar a usar mas CPU podria generar chunks corruptos o cortados como sucede con otros plugins arruinando tu mundo.
+</Callout>
+
+<Callout type="info">
+    Recuerda que si quieres que el plugin continue con la pregeneración de chunks en el caso que el servidor se reinicie por falta de memoria RAM puedes habilitar eso desde la configuración del plugin.
+</Callout>
+
+</Steps>
+
+## Mods / Modpacks (Forge)
+
+<Callout type="default">
+    Para servidores con mods Forge recomendamos usar el mod [Chunk-Pregenerator](https://www.curseforge.com/minecraft/mc-mods/chunkpregenerator) ya que el mismo tambien utiliza el algoritmo natural de generación de chunks del juego, evitando chunks corruptos o cortados. Ademas el mismo esta optimizado para usar múltiples núcleos del servidor lo que permite pregenerar chunks en mas de un mundo al mismo tiempo.
+</Callout>
+
+<Steps>
+
+### Paso 1
+Tu servidor debe ser version Forge. Luego debes subir el mod [Chunk-Pregenerator](https://www.curseforge.com/minecraft/mc-mods/chunkpregenerator) a tu servidor, dentro de la carpeta mods. **Recuerda detener tu servidor antes de subir el mod.**
+
+<Callout type="warning">
+    **Recuerda descargar la versión del mod que sea compatible con la versión de tu servidor y tener el mod en tu launcher, el mod debe estar tanto en el servidor como en tu carpeta .minecraft**
+</Callout>
+
+<Callout type="info">
+Si aún no sabes como subir archivos a tu servidor de VexyHost puedes ver este [tutorial](/game-panel/upload-files).
+</Callout>
+
+### Paso 2
+Iniciamos y entramos a nuestro servidor, luego verificamos que tengamos disponible el comando <Code>/pregen</Code>.
+
+![](https://i.imgur.com/avnLORH.png)
+
+### Paso 3
+
+<Callout type="info">
+    En este paso usaremos la siguiente secuencia de comandos:
+    - <Code>worldborder set \<value></Code>
+    - <Code>pregen start gen worldborder 1 \<world name> FAST_CHECK_GEN</Code>
+</Callout>
+
+A continuación deberemos tener OP en nuestro servidor para poder ejecutar el comando <Code>/worldborder set</Code> en nuestro caso vamos a elegir un diametro de 10.000 bloques, por lo tanto el comando seria: <Code>/worldborder set 10000</Code>
+
+Por ultimo con el comando <Code>/pregen</Code> vamos a empezar a pregenerar los chunks dentro del worldborder que creamos anteriormente. En este caso vamos a generar los chunks en el overworld, por lo que el comando seria: <Code>/pregen start gen worldborder 1 minecraft:overworld FAST_CHECK_GEN</Code>
+
+![](https://i.imgur.com/ve8zBdt.png)
+
+<Callout type="warning">
+El ETA (Tiempo estimado) será cada vez mas preciso a medida que la pregeneración avanza. **Recuerda que el mod utiliza la pregeneración de chunks natural del juego por lo que la misma no utilizará mas del 300% de CPU por mas que tengas mas CPU disponible**, esto es una limitación de la pregeneración de chunks del propio juego, forzar a usar mas CPU podria generar chunks corruptos o cortados como sucede con otros mods.
+</Callout>
+
+<Callout type="info">
+    En el caso que nos quedemos sin memoria RAM disponible y el servidor se reinicie, el mod reanudará automaticamente la pregeneración ya que esto esta pensado en el caso que lo dejes toda una noche pregenerando chunks.
+</Callout>
+
+</Steps>
+
+✅ ¡Eso es todo! Si tienes algún problema, contacta con nosotros por [Discord](https://discord.vexyhost.com/) para que podamos ayudarte.
