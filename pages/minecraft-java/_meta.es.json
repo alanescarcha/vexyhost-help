@@ -1,4 +1,5 @@
 {
     "server-icon": "Icono del servidor",
-    "pre-generate-chunks": "Pregenerar tu mundo"
+    "pre-generate-chunks": "Pregenerar tu mundo",
+    "server-motd": "MOTD del servidor"
 }

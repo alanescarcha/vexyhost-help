@@ -1,4 +1,5 @@
 {
     "server-icon": "Server Icon",
-    "pre-generate-chunks": "Pre-generate your world"
+    "pre-generate-chunks": "Pre-generate your world",
+    "server-motd": "Server MOTD"
 }
