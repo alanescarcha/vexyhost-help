@@ -1,0 +1,47 @@
+# How to add Mods to Project Zomboid
+
+import { Callout, Steps, Code } from 'nextra/components'
+
+<Steps>
+
+### Step 1
+
+Find the mod that you want add, for example [Common Sense Mod](https://www.nexusmods.com/projectzomboid/mods/87)
+
+### Step 2
+
+Locate the **Workshop ID**: 2875848298 and **Mod ID**: BB_CommonSense at the bottom part.
+
+![](https://i.imgur.com/cEoRGHA.png)
+
+### Step 3
+
+Go to your File Manager in [Game Panel](https://panel.vexyhost.com) and go to .cache > Server > \<Your Server Name\>.ini
+
+![](https://i.imgur.com/W7QJ7iz.png)
+
+<Callout type="info">
+    The .ini file to edit has the name of your server, to know the name of your server or to change it you can do it in Startup from the panel menu, under "Server Name". **The file will be generated when the server is started.**
+    
+    ![](https://i.imgur.com/rpzNUJv.png)
+</Callout>
+
+### Step 4
+
+Locate <Code>WorkshopItems=</Code> and enter the mod Workshop IDs, separated by semicolons <Code>;</Code>
+
+![](https://i.imgur.com/Rfj5vS1.png)
+
+### Step 5
+
+In the same File, Locate the <Code>Mods=</Code> section and enter the Mod IDs, also separated by semicolons <Code>;</Code>.
+
+![](https://i.imgur.com/es7Yj0v.png)
+
+### Step 6
+
+Restart the Server for the mods to be enabled.
+
+</Steps>
+
+✅ That's all! If you have any problem, contact us by [Discord](https://discord.vexyhost.com/) so we can help you.
