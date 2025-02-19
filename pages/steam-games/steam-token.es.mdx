@@ -1,0 +1,61 @@
+# Cómo añadir un Steam Token (GSLT)
+
+import { Callout, Steps, Code } from 'nextra/components'
+
+<Callout type="info">
+    Algunos juegos de Steam requieren un token llamado GSLT (Game Server Login Token).
+    Esto ayuda a los jugadores a encontrar tu servidor en la lista de servidores, también verifica la propiedad del juego (ya que se requiere una compra verificada en Steam para generar un GSLT) y evita que servidores falsos inunden la lista de servidores. Algunos juegos sin este Token no permite el ingreso de jugadores al servidor.
+    
+    **Requisitos de la cuenta de Steam:**
+    - Tu cuenta de Steam no debe estar bloqueada o baneada por la comunidad.
+    - Tu cuenta de Steam no debe estar [limitada](https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663).
+    - Tu cuenta de Steam debe tener un [numero de teléfono registrado](https://support.steampowered.com/kb_article.php?ref=8625-WRAH-9030) que cumpla los requisitos.
+    - Tu cuenta de Steam debe ser tener adquirido/comprado el juego para el que estás creando una cuenta de servidor de juego.
+    - Tu cuenta de Steam puede crear 1000 cuentas de servidor de juego.
+</Callout>
+
+<Steps>
+
+### Paso 1
+
+Vaya a https://steamcommunity.com/dev/managegameservers e inicia sesión con su cuenta de Steam.
+
+### Paso 2
+
+En el Game Panel ve al menú Startup y busca la variable **Steam Token**, allí encontrarás en su descripción el App ID para usar en el sitio de Steam.
+
+![](https://i.imgur.com/gSIy6Td.png)
+
+<Callout type="warning">
+    Tenga en cuenta que cada juego tiene su App ID diferente, en este ejemplo estamos usando el juego Unturned y su App ID es 304930, podrás ver el App ID de tu juego en la descripción de la variable Steam Token en la sección Startup del Game Panel.
+</Callout>
+
+### Paso 3
+
+En la sección "Create a new game server account" en el sitio de Steam pon el App ID del juego para el que quieres generar el token, luego escribe una nota opcional para identificar el servidor y haz clic en "Crear".
+
+![](https://i.imgur.com/QD3EA8z.png)
+
+### Paso 4
+
+Después de crear el token, copia el **Login Token** y pégalo en el panel de juego en la variable **Steam Token**.
+
+![](https://i.imgur.com/Jz0eUov.png)
+
+![](https://i.imgur.com/u8cMn8a.png)
+
+### Paso 5
+
+Por último, simplemente inicia el servidor y podrás unirte a tu servidor, puede tardar unos minutos hasta que tu servidor aparezca en la lista de servidores dentro del juego.
+
+</Steps>
+
+<Callout type="info">
+    Algunas cosas a tener en cuenta:
+    - Eres el único responsable de tus tokens. Si tus cuentas de servidor de juego están bloqueadas por cualquier motivo, es posible que no puedas jugar a los juegos asociados.
+    - No distribuyas tokens de acceso a servidores de juego a terceros. Si has distribuido un token de inicio de sesión en un servidor de juego a un tercero, elimínalo a continuación.
+    - Si restableces tu contraseña de Steam a través del sitio web de ayuda de Steam, o si el Soporte de Steam restablece tu contraseña, todos tus GSLTs serán regenerados. Esto se hace para evitar el uso indebido por parte de otra persona que pueda haber tenido acceso a tu cuenta.
+    - Un token de inicio de sesión de servidor de juego que no se utilice durante un largo periodo de tiempo (el servidor de juego nunca inicia sesión) caducará. Un token caducado puede ser regenerado a continuación.
+</Callout>
+
+✅ ¡Eso es todo! Si tienes algún problema, contacta con nosotros por [Discord](https://discord.vexyhost.com/) para que podamos ayudarte.

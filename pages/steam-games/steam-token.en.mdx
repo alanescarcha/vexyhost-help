@@ -1,0 +1,61 @@
+# How to add a Steam Token (GSLT)
+
+import { Callout, Steps, Code } from 'nextra/components'
+
+<Callout type="info">
+    Some Steam games require a token called GSLT (Game Server Login Token).
+    This helps players find your server in server list, also verifies game ownership (since a verified Steam purchase is required to generate a GSLT) and prevents fake servers from flooding the server list. Some games without this token do not allow players to join the server.
+
+    **Steam Account Requirements:**
+    - Your Steam account must not be currently community banned or locked.
+    - Your Steam account must not be [limited](https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663).
+    - Your Steam account must have a [qualifying registered phone](https://support.steampowered.com/kb_article.php?ref=8625-WRAH-9030).
+    - Your Steam account must own the game for which you are creating a game server account.
+    - Your Steam account may create 1000 game server accounts.
+</Callout>
+
+<Steps>
+
+### Step 1
+
+Go to https://steamcommunity.com/dev/managegameservers and log in with your Steam account.
+
+### Step 2
+
+In the game panel go to the Startup menu and look for the **Steam Token** variable, there you will find in its description the App ID to use on the Steam site.
+
+![](https://i.imgur.com/gSIy6Td.png)
+
+<Callout type="warning">
+    Note that each game has a different App ID, in this example we are using the game Unturned and its App ID is 304930, you can see the App ID of your game in the description of the Steam Token variable in the Startup section of the game panel.
+</Callout>
+
+### Step 3
+
+In the section "Create a new game server account" in Steam site put the App ID of the game you want to generate the token for, then type an optional memo to identify the server and click on "Create".
+
+![](https://i.imgur.com/QD3EA8z.png)
+
+### Step 4
+
+After creating the token, copy the **Login Token** and paste it into the game panel in the **Steam Token** variable.
+
+![](https://i.imgur.com/Jz0eUov.png)
+
+![](https://i.imgur.com/u8cMn8a.png)
+
+### Step 5
+
+Finally, just start the server and you will be able to join your server, it may take a few minutes for your server to show up in the server list within the game.
+
+</Steps>
+
+<Callout type="info">
+    Some things to keep in mind:
+    - You are solely responsible for these tokens. If your game server accounts are banned for any reason, you may be restricted from playing the associated games.
+    - Do not distribute game server login tokens to third parties. If you have distributed a game server login token to a third party, please delete the token below.
+    - If you reset your Steam password via the Steam help website, or if Steam Support resets your password, all your GSLTs will be regenerated. This is to prevent misuse by someone else who may have had access to your account.
+    - A game server login token that goes unused for a long period of time (the game server never logs in) will expire. An expired token can be regenerated below.
+</Callout>
+
+✅ That's all! If you have any problem, contact us by [Discord](https://discord.vexyhost.com/) so we can help you.
