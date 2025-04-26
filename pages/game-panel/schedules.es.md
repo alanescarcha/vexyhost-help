@@ -43,6 +43,8 @@ Una vez abierto el cuadro puedes seleccionar el tipo de tarea programada. "Comma
 
 "Power actions" son acciones como reiniciar, iniciar, detener y kill (forzar la detención del servidor).
 
-"Backups" te permiten hacer copias de seguridad usando el gestor de copias de seguridad. Si has alcanzado tu límite de copias de seguridad, se rotará la copia de seguridad más antigua a no ser que la misma esté bloqueada.
+"Backups" te permiten hacer copias de seguridad periódicamente. Si has alcanzado tu límite de copias de seguridad, se rotará la copia de seguridad más antigua a no ser que la misma esté bloqueada.
+
+"Delete files" te permite eliminar archivos de tu servidor periódicamente, esto es util para eliminar archivos temporales o innecesarios que no necesites en tu servidor, como por ejemplo archivos de logs, wipes en Rust y otros usos.
 
 ![](https://i.imgur.com/jzZUoO2.png)

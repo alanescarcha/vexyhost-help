@@ -1,0 +1,3 @@
+{"rule":"MORFOLOGIK_RULE_ES","sentence":"^\\Qimport { Cards, Card } from 'nextra/components'\\E$"}
+{"rule":"MORFOLOGIK_RULE_ES","sentence":"^\\Qimport { Cards, Card } from \"nextra/components\";\\E$"}
+{"rule":"MORFOLOGIK_RULE_ES","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-)[0-9]+\\Q: indica que es un código que puedes copiar y pegar en tu terminal o panel de control.\\E$"}

@@ -2,76 +2,76 @@
 
 ## What are your support hours?
 
-Our support team is available 24/7. If you have any questions or need any assistance, you can contact us at any time.
+Our support team responds every day at any time whenever possible. Please note that holidays, weekends and public holidays may cause delays in response.
 
-## Are your servers on 24/7?
+## Are your servers up 24/7?
 
-Absolutely! Our server nodes never sleep or take breaks. When maintenance is performed, notifications are sent to the affected services.
+Yes, of course. Our servers never sleep or take breaks, when maintenance work is performed, notifications are sent to affected services days in advance.
 
-## How long does setup take?
+## How long does activation take?
 
-It’s instant! Our automated system will automatically activate your server immediately after you complete your order.
+It is instantaneous. Our automated system will automatically activate your server immediately upon completion of your order. Remember that dedicated servers require manual setup and may take a little longer, as we rely on on-site personnel.
 
-## Do you provide DDoS protection?
+## Do you offer DDoS protection?
 
-Yes, of course! Cloudflare is present in all our services. If you find yourself under attack our staff will help you out right away.
+Of course, all our services have protection against this kind of attacks, some locations have better Anti-DDoS filters for specific games, so you can consult us in case your server is a constant target of attacks.
 
-## Can I upgrade/downgrade my server later on without losing my data/IP/etc?
+## Can I upgrade/downgrade my server later without losing my data/IP/etc.?
 
-Absolutely! We have a system that allows you to upgrade or downgrade your server at any time. It’s a completely automated self-serve system that you can access from the client area. When upgrading, you will only need to pay the prorated amount (the difference between your current and chosen plan).
+Yes, of course. We have a system that allows you to upgrade or downgrade your server at any time. It is a fully automated self-service system that you can access from the client area. When upgrading, you will only have to pay the prorated amount (the difference between your current plan and the one chosen based on the remaining days of service).
 
-## How much disk space is available on my Game server?
+## How much storage do I have available on my Game Server?
 
-Unlimited. You can use as much space as you need for your server as long as you comply with our fair use policy. Essentially – you can use as much space as you need for your service as long as it’s related to your service (you cannot store movies, music, etc).
+Storage on most games is unlimited. You can use as much space as you need for your server as long as you comply with our fair usage policy. Essentially - you can use as much space as you need for your service as long as it is related to your service (you cannot store movies, music, etc.). To find out if your service has limited storage, you can check the product page among its features.
 
 ## What is your refund policy?
 
-We offer a 7-days money back guarantee. If for any reason you’re not happy with your purchase or simply changed your mind, just contact us for a full refund – all we ask if that you let us know why so we can improve our service for the future.
+We offer a 7-day money-back guarantee. If for any reason you are not satisfied with your purchase or have simply changed your mind, please contact us for a full or partial refund depending on the situation, all we ask is that you let us know why you want to refund so we can improve our service for the future.
 
-## Are the player slots unlimited/adjustable?
+## Are the player slots unlimited/adjustable in the games?
 
-Sure thing! We do not limit the player slots for our Game servers.
+Yes, of course. We do not limit the slots or player slots on our Game Servers.
 
 ## What forms of payment do you accept?
 
-You can see this [here](/payments-country).
+You can see our payment methods [here]([/payments-country](https://vexyhost.com/es/payment-methods/)).
 
-## Can I cancel my server any time?
+## Can I cancel my server at any time?
 
-We would be sorry to see you leave, but you are free to cancel any time you want. There are no contracts or obligations.
+Yes, you are free to cancel your service whenever you want. There are no contracts or obligations unlike other hostings.
 
 ## How can I contact support?
 
 You can contact us by [support ticket](https://vexyhost.com/support), email `support@vexyhost.com` or on our [Discord server](https://discord.vexyhost.com).
 
-## How do I login to the control panel of my service?
+## How do I access my service control panel?
 
-You can access your control panel with the link that was sent to you in the service setup email.
+You can access your control panel with the link that was sent to you in the service activation email.
 
-## What happens if I do not pay on time for my service?
+## What happens if I do not pay my service on time?
 
-Your service will be temporarily suspended until your current invoice is paid. If any issues occur while or after paying the invoice, please contact our Sales Team.
+Your service will be temporarily suspended until you pay your bill. If any problems occur during or after bill payment, please contact our support team as soon as possible. Service is suspended for a maximum of 7 days, then cancelled and permanently removed.
 
 ## Can I migrate my service to VexyHost?
 
-You can transfer your service to VexyHost using SFTP/FTP or by creating a backup. If your backup is too large to download, you can contact our support team to make the transfer easier.
+You can transfer your service from other hostings to VexyHost using SFTP/FTP or by creating a backup. If your backup is too large to download, you can contact our support team to make the transfer and migration easier.
 
-## Can I change my server's location after ordering?
+## Can I change the location of my server after purchasing?
 
-Yes, you can contact our support team to request a change of location. Our team will instruct you on the steps to follow to transfer your service.
+Yes, you can contact our support team to request a change of your server location. Please note that this may take a little longer than usual, as it depends on the availability of servers in the requested location.
 
 ## What control panels does VexyHost use?
 
-For Game Hosting and Discord Bot Hosting we use [Pterodactyl Panel](https://pterodactyl.io/). For our Web Hosting services we use [cPanel](https://cpanel.net/). For our VPS Hosting services we use [Virtualizor](https://www.virtualizor.com/).
+For our main control panel we use [Pterodactyl Panel](https://pterodactyl.io/). For our Web Hosting services we use [cPanel](https://cpanel.net/). For our VPS Hosting services we use [Virtualizor](https://www.virtualizor.com/).
 
-## How do I decide which plan I should purchase?
+## How do I decide which plan to buy?
 
-Contact us to tell us about your idea or project and we will help you choose between our plans or we can put together a customized plan.
+Contact us to tell us about your idea or project, and we will help you choose from our plans, or we can customize a plan for you.
 
-## Do you offer other alternative plans/packages in addition to those published on the website?
+## Do you offer other alternative plans/packages besides the ones published on the web?
 
-Yes, We have ready made plans for regular customers looking for a customized service for their project, as we don’t know your project you may not find what you are looking for on the main page, that’s why you can contact us by support ticket or Discord to make your inquiry and tell us about your project so we can provide you with a customized service.
+Yes, we have pre-built plans for regular customers, as we do not know your project you may not find what you are looking for on the main page, so you can contact us by support ticket or Discord to ask us your question and tell us about your project so we can offer you a personalized service.
 
-## Do you offer game panel demo?
+## Can I use my own domain?
 
-You can check it [here](https://demo.vexyhost.com/). (The panel may not have all the recent updates that our main Game Panel has.)
+Yes, you can bring your own domain and use it in our services. To find out how to link it you can contact us to help you set it up. If you don't have a domain, in most cases we offer a free subdomain ending in `vexy.host`, otherwise you can purchase one from a domain provider.

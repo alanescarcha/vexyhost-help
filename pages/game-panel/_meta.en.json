@@ -1,8 +1,9 @@
 {
+    "what_is_it": "What is it?",
     "login": "How to Login",
     "start-server": "How to start your server",
     "subusers": "Add another User",
-    "server-importer": "Server Importer Tool",
+    "server-importer": "Server Importer",
     "backups": "How Backups work",
     "sftp": "How SFTP works",
     "swap": "What's SWAP Memory",

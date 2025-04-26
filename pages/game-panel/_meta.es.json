@@ -1,8 +1,9 @@
 {
+    "what_is_it": "¿Cuál es?",
     "login": "Iniciar sesión",
     "start-server": "Iniciar tu servidor",
     "subusers": "Agregar otro usuario",
-    "server-importer": "Herramienta Server Importer",
+    "server-importer": "Importar servidor",
     "backups": "Copias de seguridad",
     "sftp": "Cómo funciona SFTP",
     "swap": "¿Qué es la memoria SWAP?",

@@ -41,8 +41,10 @@ Pressing on the `New Task` button will allow you to set a task for your schedule
 
 Once the box is open you can select the type of schedules. Commands are game commands, so for Minecraft, if you wanted to say something in the server, you could put the `say` command. Making sure not to use a / for Minecraft.
 
-Power actions are restart, start, stop, and kill (force stop).
+"Power actions" are restart, start, stop, and kill (force stop).
 
-Backups allows you to make backups using the backup manager. If you have reached your backup limit, the oldest backup will be rotated unless the backup is locked.
+"Backups" allows you to make backups periodically. If you have reached your backup limit, the oldest backup will be rotated unless the backup is locked.
+
+“Delete files” allows you to delete files from your server periodically, this is useful for deleting temporary or unnecessary files that you don't need on your server, such as log files, Rust wipes and other uses.
 
 ![](https://i.imgur.com/jzZUoO2.png)
