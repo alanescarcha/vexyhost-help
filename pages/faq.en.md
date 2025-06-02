@@ -26,7 +26,7 @@ Storage on most games is unlimited. You can use as much space as you need for yo
 
 ## What is your refund policy?
 
-We offer a 7-day money-back guarantee. If for any reason you are not satisfied with your purchase or have simply changed your mind, please contact us for a full or partial refund depending on the situation, all we ask is that you let us know why you want to refund so we can improve our service for the future.
+Please review our terms of service. https://vexyhost.com/terms/
 
 ## Are the player slots unlimited/adjustable in the games?
 

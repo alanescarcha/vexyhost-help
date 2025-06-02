@@ -26,7 +26,7 @@ El almacenamiento en la mayoría de juegos es ilimitado. Puedes utilizar todo el
 
 ## ¿Cuál es su política de reembolso?
 
-Ofrecemos una garantía de devolución del dinero de 7 días. Si por alguna razón no está satisfecho con su compra o simplemente ha cambiado de opinión, póngase en contacto con nosotros para obtener un reembolso completo o parcial dependiendo la situación, todo lo que pedimos es que nos haga saber por qué quiere reembolsar para que podamos mejorar nuestro servicio para el futuro.
+Por favor revise nuestros términos de servicio. https://vexyhost.com/terms/
 
 ## ¿Los slots de jugadores son ilimitados/ajustables en los juegos?
 
